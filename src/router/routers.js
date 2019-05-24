@@ -1,38 +1,9 @@
 /** @format */
 
-export default [{
-    path: '/',
-    name: 'home',
-    component: require('common/Layout.vue').default,
-
-
-  },
+export default [
   {
     path: '/',
     name: 'home',
-    component: require('common/Layout.vue').default,
-
-
-  },
-  {
-    path: '/',
-    name: 'home',
-    component: require('common/Layout.vue').default,
-
-
-  },
-  {
-    path: '/',
-    name: 'home',
-    component: require('common/Layout.vue').default,
-
-
-  },
-  {
-    path: '/',
-    name: 'home',
-    component: require('common/Layout.vue').default,
-
-
-  },
+    component: require('home/Home.vue').default
+  }
 ]
