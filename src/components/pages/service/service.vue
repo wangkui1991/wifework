@@ -1,0 +1,57 @@
+<!-- @format -->
+<template>
+  <div class="service">
+    <h3>SERVICES</h3>
+    <div class="main-2">
+      <img
+        :src="require('@/assets/images/home/2-' + item.number + '.jpg')"
+        v-for="item in img2List"
+        :key="item"
+        alt
+      />
+    </div>
+    <h3>CONTACT US</h3>
+    <img src="@/assets/images/service/5" alt />
+  </div>
+</template>
+
+<script>
+export default {
+  components: {},
+  props: {},
+  data() {
+    return {
+      img2List: [
+        { number: 1, route: '' },
+        { number: 2, route: '' },
+        { number: 3, route: '' },
+        { number: 4, route: '' }
+      ]
+    }
+  },
+  computed: {},
+  created() {},
+  mounted() {},
+  watch: {},
+  methods: {}
+}
+</script>
+
+<style scoped lang="less">
+.service {
+  width: 7.5rem;
+  .main-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img {
+      width: 3.6rem;
+      height: 50%;
+    }
+  }
+  h3 {
+    text-align: left;
+  }
+}
+</style>
