@@ -149,12 +149,14 @@ export default {
       }
       .person-sum {
         display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: flex-end;
         margin-left: 20px;
         h6 {
           text-align: left;
           margin-bottom: 10px;
+          font-weight: bold;
         }
         p {
           text-align: left;
