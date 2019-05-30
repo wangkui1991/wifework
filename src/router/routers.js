@@ -25,5 +25,15 @@ export default [
     path: '/contact',
     name: 'contact',
     component: require('contact/Contact.vue').default
+  },
+  {
+    path: '/serviceDetail',
+    name: 'serviceDetail',
+    component: require('service/ServiceDetail.vue').default
+  },
+  {
+    path: '/workDetail',
+    name: 'workDetail',
+    component: require('work/WorkDetail.vue').default
   }
 ]

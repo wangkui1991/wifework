@@ -14,6 +14,7 @@
         v-for="(item, index) in listData"
         :key="index"
         :class="(index + 1) % 3 ? null : 'noRight'"
+        @click="goToPages(index)"
       >
         <img :src="require(`@/assets/images/work/${item.number}.jpg`)" alt />
         <p>Name | 项目名称</p>
@@ -81,7 +82,15 @@ export default {
   created() {},
   mounted() {},
   watch: {},
-  methods: {}
+  methods: {
+    goToPages(index) {
+      if (index >= 3) {
+        return
+      }
+
+      this.$router.push({ name: 'workDetail', query: { index } })
+    }
+  }
 }
 </script>
 

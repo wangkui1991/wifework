@@ -5,8 +5,9 @@
     <div class="main-2">
       <img
         :src="require('@/assets/images/home/2-' + item.number + '.jpg')"
-        v-for="item in img2List"
+        v-for="(item, index) in img2List"
         :key="item"
+        @click="goToService(index)"
         alt
       />
     </div>
@@ -33,7 +34,11 @@ export default {
   created() {},
   mounted() {},
   watch: {},
-  methods: {}
+  methods: {
+    goToService(index) {
+      this.$router.push({ name: 'serviceDetail', query: { index } })
+    }
+  }
 }
 </script>
 

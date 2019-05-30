@@ -139,10 +139,22 @@ p a {
 }
 
 h3 {
-  font-size: 0.3rem;
+  font-size: 0.25rem;
   align-self: flex-start;
   text-align: left;
   margin-bottom: 20px;
+}
+h4 {
+  font-size: 0.18rem;
+  align-self: flex-start;
+  text-align: left;
+  margin-bottom: 10px;
+}
+h5 {
+  font-size: 0.15rem;
+  align-self: flex-start;
+  text-align: left;
+  margin-bottom: 10px;
 }
 img {
   margin-bottom: 20px;

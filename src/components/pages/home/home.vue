@@ -2,13 +2,14 @@
 
 <template>
   <div class="home">
-    <img src="@/assets/images/home/1.jpg" alt />
+    <img src="@/assets/images/home/1.jpg" alt @click="goToAbout" />
     <h3>SERVICES</h3>
     <div class="main-2">
       <img
         :src="require('@/assets/images/home/2-' + item.number + '.jpg')"
-        v-for="item in img2List"
+        v-for="(item, index) in img2List"
         :key="item"
+        @click="goToService(index)"
         alt
       />
     </div>
@@ -16,15 +17,16 @@
     <div class="main-3">
       <img
         :src="require('@/assets/images/home/3-' + item + '.jpg')"
-        v-for="item in img3List"
+        v-for="(item, index) in img3List"
         :key="item"
+        @click="goToWork(index)"
         alt
       />
     </div>
     <h3>CUSTOMER</h3>
     <img src="@/assets/images/home/4.jpg" alt />
     <h3>CONTACT US</h3>
-    <img src="@/assets/images/home/5.jpg" alt />
+    <img src="@/assets/images/home/5.jpg" alt @click="goToContact" />
   </div>
 </template>
 
@@ -46,7 +48,20 @@ export default {
   created() {},
   mounted() {},
   watch: {},
-  methods: {},
+  methods: {
+    goToService(index) {
+      this.$router.push({ name: 'serviceDetail', query: { index } })
+    },
+    goToWork(index) {
+      this.$router.push({ name: 'workDetail', query: { index } })
+    },
+    goToAbout() {
+      this.$router.push({ name: 'about' })
+    },
+    goToContact() {
+      this.$router.push({ name: 'contact' })
+    }
+  },
   components: {}
 }
 </script>
