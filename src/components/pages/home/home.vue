@@ -2,7 +2,12 @@
 
 <template>
   <div class="home">
-    <img src="@/assets/images/home/1.jpg" alt @click="goToAbout" />
+    <img
+      src="@/assets/images/home/1.jpg"
+      alt
+      @click="goToAbout"
+      class="clickImg"
+    />
     <h3>SERVICES</h3>
     <div class="main-2">
       <img
@@ -10,6 +15,7 @@
         v-for="(item, index) in img2List"
         :key="item"
         @click="goToService(index)"
+        class="clickImg"
         alt
       />
     </div>
@@ -20,13 +26,19 @@
         v-for="(item, index) in img3List"
         :key="item"
         @click="goToWork(index)"
+        class="clickImg"
         alt
       />
     </div>
     <h3>CUSTOMER</h3>
     <img src="@/assets/images/home/4.jpg" alt />
     <h3>CONTACT US</h3>
-    <img src="@/assets/images/home/5.jpg" alt @click="goToContact" />
+    <img
+      src="@/assets/images/home/5.jpg"
+      alt
+      @click="goToContact"
+      class="clickImg"
+    />
   </div>
 </template>
 

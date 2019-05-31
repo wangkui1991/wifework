@@ -8,11 +8,17 @@
         v-for="(item, index) in img2List"
         :key="item"
         @click="goToService(index)"
+        class="clickImg"
         alt
       />
     </div>
     <h3>CONTACT US</h3>
-    <img src="@/assets/images/service/5" alt />
+    <img
+      src="@/assets/images/service/5"
+      alt
+      class="clickImg"
+      @click="$router.push('contact')"
+    />
   </div>
 </template>
 

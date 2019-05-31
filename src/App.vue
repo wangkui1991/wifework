@@ -5,7 +5,7 @@
     <img
       src="@/assets/images/home/logo.jpg"
       alt
-      class="img-logo"
+      class="clickImg"
       @click="goToHome"
     />
     <div class="nav">
@@ -158,5 +158,8 @@ h5 {
 }
 img {
   margin-bottom: 20px;
+}
+.clickImg {
+  cursor: pointer;
 }
 </style>

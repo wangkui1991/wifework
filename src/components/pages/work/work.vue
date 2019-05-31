@@ -15,6 +15,7 @@
         :key="index"
         :class="(index + 1) % 3 ? null : 'noRight'"
         @click="goToPages(index)"
+        class="clickImg"
       >
         <img :src="require(`@/assets/images/work/${item.number}.jpg`)" alt />
         <p>Name | 项目名称</p>
