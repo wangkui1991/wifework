@@ -119,7 +119,7 @@ export default {
     p {
       text-align: left;
       margin: 10px 0;
-      line-height: 0.22rem;
+      line-height: 20px;
       font-size: 0.1rem;
     }
   }
@@ -131,12 +131,13 @@ export default {
       margin-bottom: 5px;
     }
     p {
-      line-height: 0.2rem;
+      line-height: 20px;
       font-size: 0.1rem;
     }
   }
   .img-1 {
     margin-top: 20px;
+    width: 7.5rem;
   }
   ul {
     li {
@@ -162,6 +163,37 @@ export default {
           text-align: left;
           color: #666;
           letter-spacing: 2px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    ul {
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        img {
+          width: 7rem;
+          height: auto;
+        }
+        .person-sum {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-left: 20px;
+          h6 {
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+          p {
+            text-align: left;
+            color: #666;
+            letter-spacing: 2px;
+          }
         }
       }
     }

@@ -80,7 +80,6 @@ export default {
         p {
           font-size: 0.12rem;
           font-weight: bold;
-          margin-top: 20px;
         }
       }
     }
@@ -93,5 +92,22 @@ export default {
 h3 {
   margin-top: 20px;
   text-align: left;
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    .main {
+      flex-direction: column;
+      align-items: center;
+      .left {
+        width: 6rem;
+        margin-bottom: 20px;
+        height: 7rem;
+      }
+      .right {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
 }
 </style>

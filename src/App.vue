@@ -5,7 +5,7 @@
     <img
       src="@/assets/images/home/logo.jpg"
       alt
-      class="clickImg"
+      class="clickImg img-logo"
       @click="goToHome"
     />
     <div class="nav">
@@ -22,7 +22,7 @@
     </div>
     <router-view />
     <div class="line"></div>
-    <img src="@/assets/images/home/6.jpg" alt />
+    <img src="@/assets/images/home/6.jpg" alt class="foot" />
   </div>
 </template>
 
@@ -88,7 +88,8 @@ body {
   font-size: 16px;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: '微软雅黑', Tahoma, Arial, Roboto, 'Droid Sans', 'Helvetica Neue',
+    'Droid Sans Fallback', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -116,6 +117,7 @@ body {
       font-weight: bold;
       p {
         font-size: 0.1rem;
+        margin-bottom: 5px;
       }
       span {
         width: 1px;
@@ -130,6 +132,31 @@ body {
     width: 7.5rem;
     background: #ccc;
     margin-top: 50px;
+  }
+  .foot {
+    width: 7.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #app {
+    .nav {
+      .nav-item {
+        flex-direction: column;
+
+        p {
+          font-size: 0.1rem;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+    .line {
+      height: 1px;
+      width: 7.5rem;
+      background: #ccc;
+      margin-top: 50px;
+    }
   }
 }
 

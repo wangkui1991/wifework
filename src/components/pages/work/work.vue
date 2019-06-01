@@ -110,7 +110,7 @@ export default {
       text-align: left;
       margin-top: 20px;
       margin-bottom: 30px;
-      line-height: 0.18rem;
+      line-height: 20px;
       font-size: 0.1rem;
     }
   }

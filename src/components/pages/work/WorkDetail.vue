@@ -47,6 +47,7 @@ export default {
   width: 7.5rem;
   p {
     font-size: 0.12rem;
+    line-height: 20px;
     text-align: left;
     margin-bottom: 20px;
   }
@@ -57,12 +58,15 @@ export default {
     flex-wrap: wrap;
     .img-1 {
       width: 2.3rem;
+      height: 4rem;
     }
     .img-2 {
       width: 3.6rem;
+      height: 5rem;
     }
     .img-3 {
       width: 7.5rem;
+      height: 5rem;
     }
   }
 }

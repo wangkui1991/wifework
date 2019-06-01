@@ -16,7 +16,7 @@
     <img
       src="@/assets/images/service/5"
       alt
-      class="clickImg"
+      class="clickImg contact"
       @click="$router.push('contact')"
     />
   </div>
@@ -63,6 +63,9 @@ export default {
   }
   h3 {
     text-align: left;
+  }
+  .contact {
+    width: 7.5rem;
   }
 }
 </style>
