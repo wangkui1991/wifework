@@ -7,19 +7,27 @@
       alt
       class="clickImg img-logo"
       @click="goToHome"
+      @mouseover="show()"
+      @mouseout="hide()"
     />
-    <div class="nav">
-      <div
-        class="nav-item"
-        v-for="(item, index) in navData"
-        :key="index"
-        @click="goTo(item)"
-      >
-        <p>{{ item.name }}</p>
-        <span></span>
-        <p>{{ item.en }}</p>
-      </div>
+    <div class="nav-wrap">
+      <transition name="slide">
+        <div class="nav" v-if="showNav">
+          <div
+            class="nav-item"
+            :style="index === 3 ? { marginRight: 0 } : null"
+            v-for="(item, index) in navData"
+            :key="index"
+            @click="goTo(item)"
+          >
+            <p>{{ item.name }}</p>
+            <span></span>
+            <p>{{ item.en }}</p>
+          </div>
+        </div>
+      </transition>
     </div>
+
     <router-view />
     <div class="line"></div>
     <img src="@/assets/images/home/6.jpg" alt class="foot" />
@@ -48,6 +56,7 @@ export default {
   },
   data() {
     return {
+      showNav: true,
       navData: [
         {
           name: '简介',
@@ -78,6 +87,12 @@ export default {
     },
     goToHome() {
       this.$router.push({ name: 'home' })
+    },
+    show() {
+      this.showNav = true
+    },
+    hide() {
+      this.showNav = false
     }
   }
 }
@@ -98,15 +113,28 @@ body {
   flex-direction: column;
   display: flex;
   background: #fff;
+
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: all 0.5s;
+  }
+  .slide-enter,
+  .slide-leave-to {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
   .img-logo {
     margin-top: 50px;
-    width: 4rem;
+    width: 4.4rem;
+  }
+  .nav-wrap {
+    height: 0.5rem;
   }
   .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
+
     .nav-item {
       display: flex;
       flex-direction: row;
@@ -116,7 +144,7 @@ body {
       margin-bottom: 20px;
       font-weight: bold;
       p {
-        font-size: 0.1rem;
+        font-size: 0.12rem;
         margin-bottom: 5px;
       }
       span {
@@ -137,6 +165,7 @@ body {
     width: 7.5rem;
   }
 }
+
 @media screen and (max-width: 500px) {
   #app {
     .nav {

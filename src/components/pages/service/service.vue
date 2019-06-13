@@ -55,9 +55,9 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     img {
-      width: 3.6rem;
+      width: 3.65rem;
       height: 50%;
     }
   }
