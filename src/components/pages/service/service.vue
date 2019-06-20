@@ -6,7 +6,7 @@
       <img
         :src="require('@/assets/images/home/2-' + item.number + '.jpg')"
         v-for="(item, index) in img2List"
-        :key="item"
+        :key="index"
         @click="goToService(index)"
         class="clickImg"
         alt

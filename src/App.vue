@@ -2,32 +2,33 @@
 
 <template>
   <div id="app">
-    <img
-      src="@/assets/images/home/logo.jpg"
-      alt
-      class="clickImg img-logo"
-      @click="goToHome"
-      @mouseover="show()"
-      @mouseout="hide()"
-    />
-    <div class="nav-wrap">
-      <transition name="slide">
-        <div class="nav" v-if="showNav">
-          <div
-            class="nav-item"
-            :style="index === 3 ? { marginRight: 0 } : null"
-            v-for="(item, index) in navData"
-            :key="index"
-            @click="goTo(item)"
-          >
-            <p>{{ item.name }}</p>
-            <span></span>
-            <p>{{ item.en }}</p>
+    <div class="header-wrap"
+         @mouseover="show"
+         @mouseout="hide">
+      <img
+        src="@/assets/images/home/logo.jpg"
+        alt
+        class="clickImg img-logo"
+        @click="goToHome"
+      />
+      <div class="nav-wrap">
+        <transition name="slide">
+          <div class="nav" v-if="showNav">
+            <div
+              class="nav-item"
+              :style="index === 3 ? { marginRight: 0 } : null"
+              v-for="(item, index) in navData"
+              :key="index"
+              @click="goTo(item)"
+            >
+              <p>{{ item.name }}</p>
+              <span></span>
+              <p>{{ item.en }}</p>
+            </div>
           </div>
-        </div>
-      </transition>
+        </transition>
+      </div>
     </div>
-
     <router-view />
     <div class="line"></div>
     <img src="@/assets/images/home/6.jpg" alt class="foot" />
@@ -35,6 +36,7 @@
 </template>
 
 <script>
+import throttle from 'lodash/debounce'
 export default {
   name: 'App',
   beforeMount() {
@@ -50,7 +52,7 @@ export default {
     }
     if (!document.addEventListener) return
     recalc()
-    window.addEventListener(resizeEvt, recalc, false)
+    window.addEventListener(resizeEvt, throttle(recalc, 100), false)
     document.addEventListener('DOMContentLoaded', recalc, false)
     window.recalc = recalc
   },
