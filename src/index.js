@@ -3,6 +3,7 @@ import 'babel-polyfill'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import Vue from 'vue'
+import $ from 'jquery'
 import App from './App'
 import '@/assets/css/common.css'
 // 导入插件

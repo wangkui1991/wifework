@@ -36,10 +36,13 @@
 </template>
 
 <script>
-import throttle from 'lodash/debounce'
+import throttle from 'lodash/throttle'
+import $ from 'jquery'
+import VueWaypoint from 'vue-waypoint'
 export default {
   name: 'App',
   beforeMount() {
+    // console.log($, VueWaypoint)
     let docEl = document.documentElement
     let resizeEvt =
       'orientationchange' in window ? 'orientationchange' : 'resize'
@@ -47,7 +50,7 @@ export default {
       let deviceWidth = docEl.clientWidth
       if (!deviceWidth) return
       if (deviceWidth > 1024) deviceWidth = 1024
-      console.log('width', deviceWidth)
+      // console.log('width', deviceWidth)
       document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px'
     }
     if (!document.addEventListener) return

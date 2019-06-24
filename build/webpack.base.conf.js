@@ -117,7 +117,11 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": require("./webpack.env.conf")
-    })
+      "process.env": require("./webpack.env.conf"),
+    },
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    }))
   ]
 };
