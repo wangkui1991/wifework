@@ -56,7 +56,7 @@ input,
 select,
 textarea {
     font-family: SourceHanSans-Regular, '微软雅黑', 'Helvetica Neue', Arial,
-    Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self;
+    Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self, serif;
 }
 
 body {
@@ -247,12 +247,13 @@ a {
 }
 
 .title-text{
-    font-family: SourceHanSans-Light;
+    font-family: SourceHanSans-Light, '微软雅黑', 'Helvetica Neue', Arial,
+Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self, serif;
     font-weight: lighter;
     font-size: 0.3rem;
     align-self: flex-start;
     line-height: 1;
-    margin-bottom: 0.29rem;
+    margin-bottom: 0.28rem;
     letter-spacing: 0;
     color: #1a1a1a;
     transition: all 0.3s;

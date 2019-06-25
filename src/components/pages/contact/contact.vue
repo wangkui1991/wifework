@@ -1,10 +1,10 @@
 <!-- @format -->
 <template>
   <div class="contact">
-    <h3 class="title-text">CONTACT US</h3>
+    <h3 class="title-text animated slideInUp">CONTACT US</h3>
     <div class="main">
       <div class="left">
-        <div class="top">
+        <div class="top animated slideInUp">
           <div>
             <p class="name">方案资讯</p>
             <p class="des">Design Consultation</p>
@@ -19,17 +19,17 @@
           </div>
         </div>
         <!--<img class="top" src="@/assets/images/contact/0.jpg" alt="">-->
-        <div class="center">
+        <div class="center animated slideInUp">
           <img class="qrcode" src="@/assets/images/contact/2.jpg" alt />
           <span>Wechat | 微信公众号</span>
           <p>墨缇斯文化</p>
         </div>
-        <div class="bottom">
+        <div class="bottom animated slideInUp">
           <p>TEL | 027-88317739</p>
           <p>ADD | 武汉市武昌区恒大世纪广场11层1101.1102</p>
         </div>
       </div>
-      <img src="@/assets/images/contact/1.jpg" alt class="right" />
+      <img src="@/assets/images/contact/1.jpg" alt class="right animated slideInUp" />
     </div>
   </div>
 </template>
@@ -79,7 +79,7 @@ export default {
         }
         .des {
           line-height: 1;
-          font-size: 0.07rem;
+          font-size: 0.08rem;
           margin-top: 10px;
           color: #b3b3b3;
         }
@@ -128,7 +128,7 @@ h3 {
       .left {
         width: 6rem;
         margin-bottom: 20px;
-        height: 7rem;
+        height: 5rem;
       }
       .right {
         width: 6rem;

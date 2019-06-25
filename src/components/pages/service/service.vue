@@ -1,22 +1,23 @@
 <!-- @format -->
 <template>
   <div class="service">
-    <h3 class="title-text">SERVICES</h3>
+    <h3 class="title-text animated slideInUp">SERVICES</h3>
     <div class="main-2">
       <img
         :src="require('@/assets/images/home/2-' + item.number + '.jpg')"
         v-for="(item, index) in img2List"
         :key="index"
         @click="goToService(index)"
-        class="clickImg"
+        :style="{'-webkit-animation-delay' : index/10+'s','animation-delay' : index/10+'s'}"
+        class="clickImg animated slideInUp"
         alt
       />
     </div>
-    <h3 class="title-text">CONTACT US</h3>
+    <h3 class="title-text animated slideInUp">CONTACT US</h3>
     <img
       src="@/assets/images/service/5"
       alt
-      class="clickImg contact"
+      class="clickImg contact animated slideInUp"
       @click="$router.push('contact')"
     />
   </div>

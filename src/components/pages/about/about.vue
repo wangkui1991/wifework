@@ -1,23 +1,23 @@
 <!-- @format -->
 <template>
   <div class="about">
-    <h3 class="title-text">ABOUT US</h3>
+    <h3 class="title-text animated slideInUp">ABOUT US</h3>
     <div class="title">
-      <h4>墨缇斯（武汉）文化传媒有限公司，</h4>
-      <h4>成长型企业品牌建设与升级的创领者，</h4>
-      <h4>全方位品牌规划与设计服务为品牌塑造未来。</h4>
-      <p v-html="sum.s1"></p>
-      <p v-html="sum.s2"></p>
-      <p v-html="sum.s3"></p>
+      <h4 class="animated slideInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
+      <h4 class="animated slideInUp">成长型企业品牌建设与升级的创领者，</h4>
+      <h4 class="animated slideInUp">全方位品牌规划与设计服务为品牌塑造未来。</h4>
+      <p class="animated slideInUp" v-html="sum.s1"></p>
+      <p class="animated slideInUp" v-html="sum.s2"></p>
+      <p class="animated slideInUp" v-html="sum.s3"></p>
     </div>
-    <div class="des" v-for="(item, index) in listText" :key="index">
+    <div class="des animated slideInUp" v-for="(item, index) in listText" :key="index" :style="{'-webkit-animation-delay' : index/10+'s','animation-delay' : index/10+'s'}">
       <h5>{{ item.title }}</h5>
       <p>{{ item.sum }}</p>
     </div>
-    <img src="@/assets/images/about/1.jpg" alt class="img-1" />
-    <h3>OUR TEAM</h3>
+    <img src="@/assets/images/about/1.jpg" alt class="img-1 animated slideInUp" />
+    <h3 class="title-text animated slideInUp">OUR TEAM</h3>
     <ul>
-      <li v-for="(item, index) in person" :key="index">
+      <li v-for="(item, index) in person" :key="index" class="animated slideInUp" :style="{'-webkit-animation-delay' : index/6+'s','animation-delay' : index/6+'s'}">
         <img :src="require(`@/assets/images/about/${item.number}.jpg`)" alt />
         <div class="person-sum">
           <h6>{{ item.name }}</h6>
@@ -112,48 +112,54 @@ export default {
   .title {
     h4 {
       text-align: left;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 0.15rem;
       margin-bottom: 10px;
+      color: #333;
     }
     p {
       text-align: left;
       margin: 10px 0;
       line-height: 20px;
       font-size: 0.1rem;
+      color: #666;
     }
   }
   .des {
     margin-top: 30px;
     text-align: left;
     h5 {
+      font-weight: bold;
       font-size: 0.12rem;
       margin-bottom: 5px;
+      color: #333;
     }
     p {
       line-height: 20px;
       font-size: 0.1rem;
+      color: #666;
     }
   }
   .img-1 {
-    margin-top: 20px;
+    margin-top: 0.29rem;
     width: 7.5rem;
+    margin-bottom: 0.29rem;
   }
   ul {
     li {
-      display: flex;
+      float: left;
       margin-bottom: 30px;
+      width: 3.6rem;
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
       img {
-        width: 5.1rem;
-        height: 3.6rem;
-        margin: 0;
+        display: block;
+        width: 3.6rem;
+        height: 3.5rem;
+        margin: 0 0 0.14rem;
       }
       .person-sum {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin-left: 20px;
         h6 {
           text-align: left;
           margin-bottom: 10px;

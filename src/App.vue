@@ -11,7 +11,7 @@
         class="clickImg img-logo"
         @click="goToHome"
       />
-      <div class="nav-wrap">
+      <div class="nav-wrap" v-if="isPCMode">
         <transition name="slide">
           <div class="nav" v-if="showNav">
             <div
@@ -27,8 +27,18 @@
           </div>
         </transition>
       </div>
+      <div class="mobile-nav-wrap" v-else>
+        <img src="@/assets/images/home/logo.jpg" class="img-logo">
+        <dl>
+          <dt>三</dt>
+          <dd>简介</dd>
+          <dd>服务</dd>
+          <dd>案例</dd>
+          <dd>联系我们</dd>
+        </dl>
+      </div>
     </div>
-    <router-view />
+    <router-view/>
     <div class="footer">
       <p>版权所有 ©DOMANI 粤ICP备11007140号-2</p>
     </div>
@@ -38,10 +48,10 @@
 <script>
 import throttle from 'lodash/throttle'
 import $ from 'jquery'
+
 export default {
   name: 'App',
   beforeMount() {
-    // console.log($, VueWaypoint)
     let docEl = document.documentElement
     let resizeEvt =
       'orientationchange' in window ? 'orientationchange' : 'resize'
@@ -85,6 +95,11 @@ export default {
       ]
     }
   },
+  computed: {
+    isPCMode() {
+      return window.screen.height >= 1024
+    }
+  },
   methods: {
     goTo(item) {
       this.$router.push({ name: item.route })
@@ -106,8 +121,8 @@ export default {
 body {
   font-size: 16px;
 }
+
 #app {
-  font-family: SourceHanSans-Regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -150,7 +165,9 @@ body {
         0.6s background-color cubic-bezier(0.19, 1, 0.22, 1),
         0.6s -webkit-transform cubic-bezier(0.19, 1, 0.22, 1);
       p {
-        font-family: SourceHanSans-Light;
+        font-family: SourceHanSans-Light, '微软雅黑', 'Helvetica Neue', Arial,
+          Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
+          sans-self, serif;
         margin-bottom: 5px;
         /*font-size: 14px;*/
         font-size: 0.1rem;
@@ -194,12 +211,6 @@ body {
         }
       }
     }
-    .line {
-      height: 1px;
-      width: 7.5rem;
-      background: #ccc;
-      margin-top: 50px;
-    }
   }
 }
 
@@ -214,21 +225,25 @@ h3 {
   text-align: left;
   margin-bottom: 20px;
 }
+
 h4 {
   font-size: 0.18rem;
   align-self: flex-start;
   text-align: left;
   margin-bottom: 10px;
 }
+
 h5 {
   font-size: 0.15rem;
   align-self: flex-start;
   text-align: left;
   margin-bottom: 10px;
 }
+
 img {
   margin-bottom: 20px;
 }
+
 .clickImg {
   cursor: pointer;
 }
