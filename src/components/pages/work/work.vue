@@ -1,12 +1,12 @@
 <!-- @format -->
 <template>
   <div class="work">
-    <h3>OUR WORK</h3>
+    <h3 class="title-text">OUR WORK</h3>
     <div class="title">
       <h4>墨缇斯（武汉）文化传媒有限公司，</h4>
       <h4>全方位品牌规划与设计服务为品牌塑造未来。</h4>
       <p>
-        Metis文化始创于2007年，是中国最早从事成长性企业品牌综合服务机构。业务涵盖了包括调研、策略、设计、体验创新与推广等多个层面，具体到品牌建设及品牌推广、整合营销及销量提升、红色文化文创及馆藏文化文创、数字营销及新媒体运营
+        墨缇斯文化始创于2007年，是中国最早从事成长性企业品牌综合服务机构。业务涵盖了包括调研、策略、设计、体验创新与推广等多个层面，具体到品牌建设及品牌推广、整合营销及销量提升、红色文化文创及馆藏文化文创、数字营销及新媒体运营。
       </p>
     </div>
     <ul>
@@ -18,8 +18,8 @@
         class="clickImg"
       >
         <img :src="require(`@/assets/images/work/${item.number}.jpg`)" alt />
-        <p>Name | 项目名称</p>
-        <p>{{ item.name }}</p>
+        <p class="pt">Name | 项目名称</p>
+        <p :title="item.name">{{ item.name }}</p>
       </li>
     </ul>
   </div>
@@ -102,16 +102,17 @@ export default {
   .title {
     h4 {
       text-align: left;
-      font-weight: bold;
-      font-size: 0.15rem;
-      margin-bottom: 10px;
+      font-size: 0.16rem;
+      line-height: 0.19rem;
+      color: #333;
     }
     p {
       text-align: left;
       margin-top: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       line-height: 20px;
       font-size: 0.1rem;
+      color: #666;
     }
   }
 
@@ -121,21 +122,28 @@ export default {
 
     li {
       width: 2.4rem;
-      margin-right: 0.13rem;
-      margin-bottom: 10px;
+      margin-right: 0.14rem;
+      margin-bottom: 0.29rem;
       &.noRight {
         margin-right: 0;
       }
       img {
+        display: block;
         width: 2.4rem;
-        height: 2.42rem;
+        height: 2.4rem;
+        margin-bottom: 0.14rem;
       }
       p {
         text-align: left;
-        margin-bottom: 10px;
+        line-height: 1;
         font-size: 0.12rem;
-        font-weight: bold;
         color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.pt {
+          margin-bottom: 10px;
+        }
       }
     }
   }

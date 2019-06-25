@@ -2,7 +2,7 @@
 
 <template>
   <div class="service-detail">
-    <h3>{{ item.name }}</h3>
+    <h3 class="title-text">{{ item.name }}</h3>
     <h5>{{ item.des }}</h5>
     <p>{{ item.con }}</p>
     <img :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)" alt />

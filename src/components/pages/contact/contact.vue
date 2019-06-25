@@ -1,7 +1,7 @@
 <!-- @format -->
 <template>
   <div class="contact">
-    <h3>CONTACT US</h3>
+    <h3 class="title-text">CONTACT US</h3>
     <div class="main">
       <div class="left">
         <div class="top">
@@ -13,14 +13,20 @@
             <p class="name">商务合作</p>
             <p class="des">Bussiness Cooperation</p>
           </div>
+          <div>
+            <p class="name">媒体合作</p>
+            <p class="des">Media Cooperation</p>
+          </div>
         </div>
+        <!--<img class="top" src="@/assets/images/contact/0.jpg" alt="">-->
         <div class="center">
-          <p>TEA | 027-88317739</p>
-          <p>ADD | 武汉市武昌区恒大世纪广场11层1101.1102</p>
+          <img class="qrcode" src="@/assets/images/contact/2.jpg" alt />
+          <span>Wechat | 微信公众号</span>
+          <p>墨缇斯文化</p>
         </div>
         <div class="bottom">
-          <img src="@/assets/images/contact/2.jpg" alt />
-          <p>微信公众号</p>
+          <p>TEL | 027-88317739</p>
+          <p>ADD | 武汉市武昌区恒大世纪广场11层1101.1102</p>
         </div>
       </div>
       <img src="@/assets/images/contact/1.jpg" alt class="right" />
@@ -48,43 +54,64 @@ export default {
   width: 7.5rem;
   .main {
     display: flex;
-    padding-top: 20px;
     .left {
       width: 3.75rem;
+      height: 3.75rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      height: 3.75rem;
       .top {
-        width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-right: 20px;
+        > div {
+          padding: 0 20px;
+          border-left: 1px solid #999;
+          &:last-child {
+            border-right: 1px solid #999;
+          }
+        }
         .name {
+          padding-bottom: 0.02rem;
+          line-height: 1;
           font-size: 0.12rem;
-          font-weight: bold;
+          color: #333;
         }
         .des {
-          font-size: 0.1rem;
+          line-height: 1;
+          font-size: 0.07rem;
           margin-top: 10px;
+          color: #b3b3b3;
         }
       }
       .center {
-        font-size: 0.15rem;
-        font-weight: Bold;
+        line-height: 1;
+        text-align: center;
+        font-size: 0.12rem;
+        .qrcode {
+          display: block;
+          width: 1.46rem;
+          margin: 0 auto 10px;
+        }
+        span {
+          color: #b3b3b3;
+        }
         p {
-          margin-bottom: 10px;
+          padding-top: 10px;
+          color: #333;
         }
       }
       .bottom {
         p {
-          font-size: 0.12rem;
-          font-weight: bold;
+          font-size: 0.13rem;
+          margin-top: 10px;
+          letter-spacing: 0.02rem;
         }
       }
     }
     .right {
-      width: 3.75rem;
+      display: block;
+      width: 3.67rem;
       height: 3.75rem;
     }
   }

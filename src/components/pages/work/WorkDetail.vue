@@ -2,7 +2,7 @@
 
 <template>
   <div class="work-detail">
-    <h3>OUR WORK</h3>
+    <h3 class="title-text">OUR WORK</h3>
     <h4>Name | 项目名称</h4>
     <h5>{{ item.name }}</h5>
     <p>{{ item.des }}</p>

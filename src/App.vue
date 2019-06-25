@@ -22,23 +22,22 @@
               @click="goTo(item)"
             >
               <p>{{ item.name }}</p>
-              <span></span>
-              <p>{{ item.en }}</p>
+              <p class="en"><em>|</em>{{ item.en }}</p>
             </div>
           </div>
         </transition>
       </div>
     </div>
     <router-view />
-    <div class="line"></div>
-    <img src="@/assets/images/home/6.jpg" alt class="foot" />
+    <div class="footer">
+      <p>版权所有 ©DOMANI 粤ICP备11007140号-2</p>
+    </div>
   </div>
 </template>
 
 <script>
 import throttle from 'lodash/throttle'
 import $ from 'jquery'
-import VueWaypoint from 'vue-waypoint'
 export default {
   name: 'App',
   beforeMount() {
@@ -108,8 +107,7 @@ body {
   font-size: 16px;
 }
 #app {
-  font-family: '微软雅黑', Tahoma, Arial, Roboto, 'Droid Sans', 'Helvetica Neue',
-    'Droid Sans Fallback', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self;
+  font-family: SourceHanSans-Regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -144,30 +142,41 @@ body {
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-right: 24px;
+      margin-right: 40px;
       cursor: pointer;
       margin-bottom: 20px;
-      font-weight: bold;
+      transition: 0.3s transform cubic-bezier(0.19, 1, 0.22, 1),
+        0.6s opacity cubic-bezier(0.19, 1, 0.22, 1),
+        0.6s background-color cubic-bezier(0.19, 1, 0.22, 1),
+        0.6s -webkit-transform cubic-bezier(0.19, 1, 0.22, 1);
       p {
-        font-size: 0.12rem;
+        font-family: SourceHanSans-Light;
         margin-bottom: 5px;
-      }
-      span {
-        width: 1px;
-        height: 0.1rem;
-        margin: 0 8px;
-        background: #333;
+        /*font-size: 14px;*/
+        font-size: 0.1rem;
+        line-height: 1;
+        font-weight: normal;
+        color: #333;
+        &.en {
+          color: #b3b3b3;
+          em {
+            padding: 0 8px;
+            color: #e5e5e5;
+          }
+        }
       }
     }
   }
-  .line {
-    height: 1px;
+  .footer {
     width: 7.5rem;
-    background: #ccc;
-    margin-top: 50px;
-  }
-  .foot {
-    width: 7.5rem;
+    margin-top: 0.36rem;
+    padding: 0.29rem 0;
+    border-top: 1px solid #e6e6e6;
+    p {
+      text-align: center;
+      font-size: 12px;
+      color: #b3b3b3;
+    }
   }
 }
 

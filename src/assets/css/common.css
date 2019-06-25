@@ -55,7 +55,8 @@ button,
 input,
 select,
 textarea {
-    font-family: 'Microsoft YaHei', arial, SimSun, sans-serif, tahoma;
+    font-family: SourceHanSans-Regular, '微软雅黑', 'Helvetica Neue', Arial,
+    Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self;
 }
 
 body {
@@ -243,4 +244,20 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.title-text{
+    font-family: SourceHanSans-Light;
+    font-weight: lighter;
+    font-size: 0.3rem;
+    align-self: flex-start;
+    line-height: 1;
+    margin-bottom: 0.29rem;
+    letter-spacing: 0;
+    color: #1a1a1a;
+    transition: all 0.3s;
+}
+
+.shadow {
+    text-shadow: 2px 0 2px #666;
 }
