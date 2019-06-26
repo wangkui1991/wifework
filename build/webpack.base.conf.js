@@ -81,11 +81,11 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff|woff2|eot|ttf|otf|svg)?$/,
         loader: "url-loader",
         options: {
           limit: 10000,
-          name: utils.assetsPath("fonts/[name].[hash:7].[ext]")
+          name: utils.assetsPath("fonts/[name]/[name].[ext]")
         }
       },
       {
@@ -118,10 +118,11 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       "process.env": require("./webpack.env.conf"),
-    },
-    new webpack.ProvidePlugin({
+    }
+    /*new webpack.ProvidePlugin({
       jQuery: "jquery",
       $: "jquery"
-    }))
+    })*/
+    )
   ]
 };

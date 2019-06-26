@@ -47,7 +47,6 @@
 
 <script>
 import throttle from 'lodash/throttle'
-import $ from 'jquery'
 
 export default {
   name: 'App',
@@ -95,11 +94,11 @@ export default {
       ]
     }
   },
-  computed: {
+  /*computed: {
     isPCMode() {
       return window.screen.height >= 1024
     }
-  },
+  },*/
   methods: {
     goTo(item) {
       this.$router.push({ name: item.route })
