@@ -11,7 +11,7 @@
         class="clickImg img-logo"
         @click="goToHome"
       />
-      <div class="nav-wrap" v-if="isPCMode">
+      <div class="nav-wrap">
         <transition name="slide">
           <div class="nav" v-if="showNav">
             <div
@@ -21,13 +21,13 @@
               :key="index"
               @click="goTo(item)"
             >
-              <p>{{ item.name }}</p>
+              <p class="zh">{{ item.name }}</p>
               <p class="en"><em>|</em>{{ item.en }}</p>
             </div>
           </div>
         </transition>
       </div>
-      <div class="mobile-nav-wrap" v-else>
+      <!--<div class="mobile-nav-wrap" v-else>
         <img src="@/assets/images/home/logo.jpg" class="img-logo">
         <dl>
           <dt>三</dt>
@@ -36,11 +36,11 @@
           <dd>案例</dd>
           <dd>联系我们</dd>
         </dl>
-      </div>
+      </div>-->
     </div>
     <router-view/>
     <div class="footer">
-      <p>版权所有 ©DOMANI 粤ICP备11007140号-2</p>
+      <p>版权所有 ©METIS 粤ICP备11007140号-2</p>
     </div>
   </div>
 </template>
@@ -142,8 +142,8 @@ body {
     opacity: 0;
   }
   .img-logo {
-    margin-top: 50px;
     width: 4.4rem;
+    margin: 50px auto 20px;
   }
   .nav-wrap {
     height: 0.5rem;
@@ -169,8 +169,7 @@ body {
           Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
           sans-self, serif;
         margin-bottom: 5px;
-        /*font-size: 14px;*/
-        font-size: 0.1rem;
+        font-size: 14px;
         line-height: 1;
         font-weight: normal;
         color: #333;
@@ -191,7 +190,7 @@ body {
     border-top: 1px solid #e6e6e6;
     p {
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
       color: #b3b3b3;
     }
   }
@@ -199,14 +198,21 @@ body {
 
 @media screen and (max-width: 500px) {
   #app {
+    .nav-wrap {
+      height: 0.8rem;
+    }
     .nav {
       .nav-item {
         flex-direction: column;
+        text-align: center;
 
         p {
-          font-size: 0.1rem;
+          font-size: 0.12rem;
+          &.zh {
+            font-weight: bold;
+          }
         }
-        span {
+        em {
           display: none;
         }
       }
@@ -241,6 +247,7 @@ h5 {
 }
 
 img {
+  display: block;
   margin-bottom: 20px;
 }
 

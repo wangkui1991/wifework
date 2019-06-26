@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "SourceHanSans-Normal";
+  src: url("SourceHanSans-Normal/SourceHanSans-Normal.woff2") format("woff2"),
+  url("SourceHanSans-Normal/SourceHanSans-Normal.woff") format("woff"),
+  url("SourceHanSans-Normal/SourceHanSans-Normal.ttf") format("truetype"),
+  url("SourceHanSans-Normal/SourceHanSans-Normal.eot") format("embedded-opentype"),
+  url("SourceHanSans-Normal/SourceHanSans-Normal.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SourceHanSans-Regular";
+  src: url("SourceHanSans-Regular/SourceHanSans-Regular.woff2") format("woff2"),
+  url("SourceHanSans-Regular/SourceHanSans-Regular.woff") format("woff"),
+  url("SourceHanSans-Regular/SourceHanSans-Regular.ttf") format("truetype"),
+  url("SourceHanSans-Regular/SourceHanSans-Regular.eot") format("embedded-opentype"),
+  url("SourceHanSans-Regular/SourceHanSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SourceHanSans-Medium";
+  src: url("SourceHanSans-Medium/SourceHanSans-Medium.woff2") format("woff2"),
+  url("SourceHanSans-Medium/SourceHanSans-Medium.woff") format("woff"),
+  url("SourceHanSans-Medium/SourceHanSans-Medium.ttf") format("truetype"),
+  url("SourceHanSans-Medium/SourceHanSans-Medium.eot") format("embedded-opentype"),
+  url("SourceHanSans-Medium/SourceHanSans-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SourceHanSans-Light";
+  src: url("SourceHanSans-Light/SourceHanSans-Light.woff2") format("woff2"),
+  url("SourceHanSans-Light/SourceHanSans-Light.woff") format("woff"),
+  url("SourceHanSans-Light/SourceHanSans-Light.ttf") format("truetype"),
+  url("SourceHanSans-Light/SourceHanSans-Light.eot") format("embedded-opentype"),
+  url("SourceHanSans-Light/SourceHanSans-Light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SourceHanSans-Bold";
+  src: url("SourceHanSans-Bold/SourceHanSans-Bold.woff2") format("woff2"),
+  url("SourceHanSans-Bold/SourceHanSans-Bold.woff") format("woff"),
+  url("SourceHanSans-Bold/SourceHanSans-Bold.ttf") format("truetype"),
+  url("SourceHanSans-Bold/SourceHanSans-Bold.eot") format("embedded-opentype"),
+  url("SourceHanSans-Bold/SourceHanSans-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

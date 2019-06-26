@@ -1,10 +1,10 @@
 <!-- @format -->
 <template>
   <div class="contact">
-    <h3 class="title-text animated slideInUp">CONTACT US</h3>
+    <h3 class="title-text animated fadeInUp">CONTACT US</h3>
     <div class="main">
-      <div class="left">
-        <div class="top animated slideInUp">
+      <div class="left animated fadeInUp ani_delay_1">
+        <div class="top">
           <div>
             <p class="name">方案资讯</p>
             <p class="des">Design Consultation</p>
@@ -18,18 +18,17 @@
             <p class="des">Media Cooperation</p>
           </div>
         </div>
-        <!--<img class="top" src="@/assets/images/contact/0.jpg" alt="">-->
-        <div class="center animated slideInUp">
+        <div class="center">
           <img class="qrcode" src="@/assets/images/contact/2.jpg" alt />
           <span>Wechat | 微信公众号</span>
           <p>墨缇斯文化</p>
         </div>
-        <div class="bottom animated slideInUp">
+        <div class="bottom">
           <p>TEL | 027-88317739</p>
           <p>ADD | 武汉市武昌区恒大世纪广场11层1101.1102</p>
         </div>
       </div>
-      <img src="@/assets/images/contact/1.jpg" alt class="right animated slideInUp" />
+      <img src="@/assets/images/contact/1.jpg" alt class="right animated fadeInUp ani_delay_2"/>
     </div>
   </div>
 </template>

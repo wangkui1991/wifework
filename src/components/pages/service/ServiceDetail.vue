@@ -2,11 +2,11 @@
 
 <template>
   <div class="service-detail">
-    <h3 class="title-text animated slideInUp">{{ item.name }}</h3>
-    <h5 class="animated slideInUp">{{ item.des }}</h5>
-    <p class="animated slideInUp">{{ item.con }}</p>
-    <img class="animated slideInUp" :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)" alt />
-    <div class="tag-wrap animated slideInUp">
+    <h3 class="title-text animated fadeInUp">{{ item.name }}</h3>
+    <h5 class="animated fadeInUp">{{ item.des }}</h5>
+    <p class="animated fadeInUp">{{ item.con }}</p>
+    <img class="animated fadeInUp" :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)" alt />
+    <div class="tag-wrap animated fadeInUp">
       <div v-for="(a, i) in item.list" :key="i">
         <h4>{{ a.name }}</h4>
         <h5 v-if="a.des">{{ a.des }}</h5>

@@ -262,3 +262,66 @@ Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self, serif;
 .shadow {
     text-shadow: 2px 0 2px #666;
 }
+.fadeInUp{
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(.19,1,.22,1);
+    animation-fill-mode: forwards;
+}
+/*css动画延时类*/
+.ani_delay_1{
+    animation-delay: .1s;
+}
+.ani_delay_2{
+    animation-delay: .2s;
+}
+.ani_delay_3{
+    animation-delay: .3s;
+}
+.ani_delay_4{
+    animation-delay: .4s;
+}
+.ani_delay_5{
+    animation-delay: .5s;
+}
+.ani_delay_6{
+    animation-delay: .6s;
+}
+.ani_delay_7{
+    animation-delay: .7s;
+}
+.ani_delay_8{
+    animation-delay: .8s;
+}
+.ani_delay_9{
+    animation-delay: .9s;
+}
+.ani_delay_10{
+    animation-delay: .92s;
+}
+.ani_delay_11{
+    animation-delay: .93s;
+}
+.ani_delay_12{
+    animation-delay: .96s;
+}
+.ani_delay_13{
+    animation-delay: .98s;
+}
+.ani_delay_14{
+    animation-delay: 1s;
+}
+.ani_delay_15{
+    animation-delay: 1.02s;
+}
+.ani_delay_16{
+    animation-delay: 1.04s;
+}
+.ani_delay_17{
+    animation-delay: 1.06s;
+}
+.ani_delay_18{
+    animation-delay: 1.08s;
+}
+.ani_delay_19{
+    animation-delay: 1.09s;
+}

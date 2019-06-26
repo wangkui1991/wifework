@@ -1,23 +1,23 @@
 <!-- @format -->
 <template>
   <div class="about">
-    <h3 class="title-text animated slideInUp">ABOUT US</h3>
+    <h3 class="title-text animated fadeInUp">ABOUT US</h3>
     <div class="title">
-      <h4 class="animated slideInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
-      <h4 class="animated slideInUp">成长型企业品牌建设与升级的创领者，</h4>
-      <h4 class="animated slideInUp">全方位品牌规划与设计服务为品牌塑造未来。</h4>
-      <p class="animated slideInUp" v-html="sum.s1"></p>
-      <p class="animated slideInUp" v-html="sum.s2"></p>
-      <p class="animated slideInUp" v-html="sum.s3"></p>
+      <h4 class="animated fadeInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
+      <h4 class="animated fadeInUp">成长型企业品牌建设与升级的创领者，</h4>
+      <h4 class="animated fadeInUp">全方位品牌规划与设计服务为品牌塑造未来。</h4>
+      <p class="animated fadeInUp" v-html="sum.s1"></p>
+      <p class="animated fadeInUp" v-html="sum.s2"></p>
+      <p class="animated fadeInUp" v-html="sum.s3"></p>
     </div>
-    <div class="des animated slideInUp" v-for="(item, index) in listText" :key="index" :style="{'-webkit-animation-delay' : index/10+'s','animation-delay' : index/10+'s'}">
+    <div v-for="(item, index) in listText" :key="index" :class="['des animated fadeInUp', 'ani_delay_'+(index+1)]">
       <h5>{{ item.title }}</h5>
       <p>{{ item.sum }}</p>
     </div>
-    <img src="@/assets/images/about/1.jpg" alt class="img-1 animated slideInUp" />
-    <h3 class="title-text animated slideInUp">OUR TEAM</h3>
+    <img src="@/assets/images/about/1.jpg" alt class="img-1 animated fadeInUp" />
+    <h3 class="title-text animated fadeInUp">OUR TEAM</h3>
     <ul>
-      <li v-for="(item, index) in person" :key="index" class="animated slideInUp" :style="{'-webkit-animation-delay' : index/6+'s','animation-delay' : index/6+'s'}">
+      <li v-for="(item, index) in person" :key="index" :class="['animated fadeInUp', 'ani_delay_'+(index+1)]">
         <img :src="require(`@/assets/images/about/${item.number}.jpg`)" alt />
         <div class="person-sum">
           <h6>{{ item.name }}</h6>

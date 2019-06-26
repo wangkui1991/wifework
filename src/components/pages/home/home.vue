@@ -3,22 +3,22 @@
 <template>
   <div class="home">
     <div class="box box-0" @click="goToAbout">
-      <div class="left-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+      <div class="left-c slice ani_delay_1" v-waypoint="wayPointConfig"><img
         src="@/assets/images/home/1-1.jpg"></div>
       <div class="right-c">
         <div class="r-top">
-          <div class="rl-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+          <div class="rl-c slice ani_delay_2" v-waypoint="wayPointConfig"><img
             class="l-img" src="@/assets/images/home/1-2.jpg"></div>
-          <div class="rr-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+          <div class="rr-c slice ani_delay_3" v-waypoint="wayPointConfig"><img
             class="r-img" src="@/assets/images/home/1-3.jpg"></div>
         </div>
-        <div class="r-middle slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+        <div class="r-middle slice ani_delay_4" v-waypoint="wayPointConfig">
           <h5 class="text-c">和你一起惊艳世界</h5>
           <img src="@/assets/images/home/1-4.jpg"></div>
         <div class="r-bottom">
-          <div class="slice rl-c" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+          <div class="slice rl-c ani_delay_5" v-waypoint="wayPointConfig"><img
             class="l-img" src="@/assets/images/home/1-5.jpg"></div>
-          <div class="slice rr-c" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+          <div class="slice rr-c ani_delay_6" v-waypoint="wayPointConfig"><img
             class="r-img" src="@/assets/images/home/1-6.jpg"></div>
         </div>
       </div>
@@ -29,17 +29,19 @@
       @mouseover="hoverTitle('services')"
       @mouseout="noHoverTitle('services')"
       ref="services"
+      v-waypoint="wayPointConfig"
     >
       SERVICES
     </h3>
     <div class="box box-1">
       <ul class="case-list">
         <li v-for="(item, index) in caseList"
-            :style="{'background-image':'url('+require('@/assets/images/home/2-' + item.number + '.jpg')+')','-webkit-animation-delay' : index/10+'s','animation-delay' : index/10+'s'}"
+            :style="{'background-image':'url('+require('@/assets/images/home/2-' + item.number + '.jpg')+')'}"
             :key="item.number"
+            :class="'ani_delay_'+(index+1)"
             @click="goToService(index)"
-            v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
-          <div class="txt-con">
+            v-waypoint="wayPointConfig">
+          <div class="text-con">
             <h5>{{item.title}}</h5>
             <p>{{item.desc1}}</p>
             <p class="lp">{{item.desc2}}</p>
@@ -53,20 +55,21 @@
       @mouseover="hoverTitle('work')"
       @mouseout="noHoverTitle('work')"
       ref="work"
+      v-waypoint="wayPointConfig"
     >
       OUR WORK
     </h3>
     <div class="box box-2">
       <div class="col col-1" @click="goToWork(0)">
-        <div class="top-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+        <div class="top-c slice ani_delay_1" v-waypoint="wayPointConfig"><img
           src="@/assets/images/home/3-1.jpg"></div>
         <div class="bottom-c">
-          <div class="left-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="left-c slice ani_delay_2" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/3-2.jpg"></div>
-          <div class="middle-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="middle-c slice ani_delay_3" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/3-3.jpg"></div>
-          <div class="right-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
-            <div class="txt-c">
+          <div class="right-c slice ani_delay_4" v-waypoint="wayPointConfig">
+            <div class="text-c">
               <h5>Name | 项目名称</h5>
               <p>UR COLLECTION | 奥普</p>
             </div>
@@ -76,30 +79,30 @@
       </div>
       <div class="col col-2" @click="goToWork(1)">
         <div class="left-c">
-          <div class="l-top slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="l-top slice ani_delay_1" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/4-1.jpg"></div>
           <div class="l-middle">
-            <div class="left-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+            <div class="left-c slice ani_delay_2" v-waypoint="wayPointConfig">
               <img src="@/assets/images/home/4-2.jpg"></div>
-            <div class="right-c slice"
-                 v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+            <div class="right-c slice ani_delay_3"
+                 v-waypoint="wayPointConfig"><img
               src="@/assets/images/home/4-3.jpg"></div>
           </div>
           <div class="l-bottom">
-            <div class="left-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+            <div class="left-c slice ani_delay_4" v-waypoint="wayPointConfig">
               <img src="@/assets/images/home/4-4.jpg"></div>
-            <div class="right-c slice"
-                 v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+            <div class="right-c slice ani_delay_5"
+                 v-waypoint="wayPointConfig"><img
               src="@/assets/images/home/4-5.jpg"></div>
           </div>
         </div>
         <div class="right-c">
-          <div class="l-top slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="l-top slice ani_delay_6" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/4-6.jpg"></div>
-          <div class="l-middle slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="l-middle slice ani_delay_7" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/4-7.jpg"></div>
-          <div class="l-bottom slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
-            <div class="txt-c">
+          <div class="l-bottom slice ani_delay_8" v-waypoint="wayPointConfig">
+            <div class="text-c">
               <h5>Name | 项目名称</h5>
               <p>UR COLLECTION | 邮储</p>
             </div>
@@ -109,20 +112,20 @@
       </div>
       <div class="col col-3">
         <div class="left-c">
-          <div class="l-top slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="l-top slice ani_delay_1" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/5-1.jpg"></div>
           <div class="l-middle">
-            <div class="left-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+            <div class="left-c slice ani_delay_2" v-waypoint="wayPointConfig">
               <img src="@/assets/images/home/5-2.jpg"></div>
-            <div class="right-c slice"
-                 v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"><img
+            <div class="right-c slice ani_delay_3"
+                 v-waypoint="wayPointConfig"><img
               src="@/assets/images/home/5-3.jpg"></div>
           </div>
-          <div class="l-bottom slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+          <div class="l-bottom slice ani_delay_4" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/5-4.jpg"></div>
         </div>
-        <div class="right-c slice" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
-          <div class="txt-c">
+        <div class="right-c slice ani_delay_5" v-waypoint="wayPointConfig">
+          <div class="text-c">
             <h5>Name | 项目名称</h5>
             <p>UR COLLECTION | 五粮液</p>
           </div>
@@ -136,15 +139,17 @@
       @mouseover="hoverTitle('customer')"
       @mouseout="noHoverTitle('customer')"
       ref="customer"
+      v-waypoint="wayPointConfig"
     >
       CUSTOMER
     </h3>
     <div class="box box-3">
       <ul class="logo-list">
         <li v-for="(item, index) in 9"
-            :style="{'background-image':'url('+require('@/assets/images/home/6-' + (index+1) + '.jpg')+')','-webkit-animation-delay' : index/10+'s','animation-delay' : index/10+'s'}"
+            :style="{'background-image':'url('+require('@/assets/images/home/6-' + (index+1) + '.jpg')+')'}"
             :key="index" class="slice"
-            v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"></li>
+            :class="'ani_delay_'+(index+1)"
+            v-waypoint="wayPointConfig"></li>
       </ul>
     </div>
     <!--CONTACT US-->
@@ -153,12 +158,13 @@
       @mouseover="hoverTitle('contact')"
       @mouseout="noHoverTitle('contact')"
       ref="contact"
+      v-waypoint="wayPointConfig"
     >
       CONTACT US
     </h3>
     <div class="box box-4">
       <div class="slice" @click="goToContact"
-           v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
+           v-waypoint="wayPointConfig">
         <img
           src="@/assets/images/home/5.jpg"
           class="clickImg"
@@ -169,7 +175,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import { addClass, removeClass } from '@/assets/js/common'
 
 export default {
@@ -207,10 +212,14 @@ export default {
           route: ''
         }
       ],
-      intersectionOptions: {
-        root: null,
-        rootMargin: '0px 0px 0px 0px',
-        threshold: [0.2, 0.75] // [0.25, 0.75] if you want a 25% offset!
+      wayPointConfig: {
+        active: true,
+        callback: this.onWaypoint,
+        options: {
+          root: null,
+          rootMargin: '0px 0px 0px 0px',
+          threshold: [0.2, 0.75] // [0.25, 0.75] if you want a 25% offset!
+        }
       }
     }
   },
@@ -222,22 +231,23 @@ export default {
     onWaypoint({ el, going, direction, _entry }) {
       // going: in, out
       // direction: top, right, bottom, left
+      // console.log(this.$waypointMap)
       if (going === this.$waypointMap.GOING_IN) {
-        //          console.log('waypoint going in!') //激活-出现了
+        //  console.log('waypoint going in!') //激活-出现了
         el.classList.add('animated')
-        el.classList.add('slideInUp')
+        el.classList.add('fadeInUp')
       }
       /*if (going === this.$waypointMap.GOING_OUT) {
           console.log('waypoint going out!')
-        }
-        if (direction === this.$waypointMap.DIRECTION_TOP) {
-          console.log('waypoint going top!')
+        }*/
+      /*if (direction === this.$waypointMap.DIRECTION_TOP) {
+          // console.log('waypoint going top!')
           el.classList.add('animated')
-          el.classList.add('slideInUp')
+          el.classList.add('fadeInUp')
         }*/
       /*if (direction === this.$waypointMap.DIRECTION_BOTTOM) {
-                          console.log('waypoint going bottom!')
-                        }*/
+          console.log('waypoint going bottom!')
+        }*/
     },
     hoverTitle(e) {
       let dom = this.$refs[e]
@@ -262,34 +272,45 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="less">
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 7.5rem;
+
   .img-logo {
     display: block;
     width: 3.95rem;
     height: 1rem;
+    -webkit-touch-callout: none;
   }
+
   .title-text {
     cursor: pointer;
+    padding-top: 2px;
   }
+
   .box {
     position: relative;
     width: 7.5rem;
     overflow: hidden;
     display: block;
+
     .left-c {
       float: left;
     }
+
     .right-c {
       float: right;
     }
+
     .slice {
+      opacity: 0;
       position: relative;
       cursor: pointer;
+
       &:before {
         opacity: 0;
         position: absolute;
@@ -303,33 +324,41 @@ export default {
         transition: all 0.3s ease;
       }
     }
+
     &.box-2:hover {
       .slice:before {
         opacity: 0;
       }
+
       .text-c {
         opacity: 0;
       }
     }
+
     &:hover {
       .slice:before {
         opacity: 1;
       }
+
       .text-c {
         opacity: 1;
       }
     }
   }
+
   .box-0 {
     margin-bottom: 0.28rem;
+
     .left-c {
       width: 2.34rem;
       height: 3.51rem;
+
       img {
         width: 2.34rem;
         height: 3.51rem;
       }
     }
+
     .right-c {
       display: flex;
       flex-direction: column;
@@ -337,35 +366,43 @@ export default {
       width: 5rem;
       height: 3.51rem;
     }
+
     .r-top {
       overflow: hidden;
+
       .rl-c {
         float: left;
         width: 2.72rem;
         height: 1.12rem;
       }
+
       .rr-c {
         float: right;
         width: 2.13rem;
         height: 1.12rem;
       }
+
       .l-img {
         width: 2.72rem;
         height: 1.12rem;
       }
+
       .r-img {
         width: 2.13rem;
         height: 1.12rem;
       }
     }
+
     .r-middle {
       width: 5rem;
       height: 0.98rem;
+
       img {
         width: 5rem;
         height: 0.98rem;
       }
     }
+
     .text-c {
       opacity: 0;
       position: absolute;
@@ -377,37 +414,46 @@ export default {
       color: #fff;
       transition: all 0.3s ease;
     }
+
     .r-bottom {
       overflow: hidden;
+
       .rl-c {
         float: left;
         width: 2.72rem;
         height: 1.1rem;
       }
+
       .rr-c {
         float: right;
         width: 2.13rem;
         height: 1.1rem;
       }
+
       .l-img {
         width: 2.72rem;
         height: 1.1rem;
       }
+
       .r-img {
         width: 2.13rem;
         height: 1.1rem;
       }
     }
   }
+
   .box-1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 0.14rem;
+
     .case-list {
       overflow: hidden;
+
       li {
+        opacity: 0;
         float: left;
         cursor: pointer;
         width: 3.67rem;
@@ -417,16 +463,19 @@ export default {
         background-position: center;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+
         &:hover {
-          .txt-con {
+          .text-con {
             opacity: 1;
           }
         }
+
         &:nth-child(2n + 1) {
           margin-right: 0.14rem;
         }
       }
-      .txt-con {
+
+      .text-con {
         position: relative;
         opacity: 0;
         width: 100%;
@@ -435,19 +484,22 @@ export default {
         color: #f2f2f2;
         background: rgba(0, 0, 0, 0.4);
         transition: all 0.3s ease;
+
         h5 {
           position: absolute;
-          bottom: 0.5rem;
+          bottom: 0.46rem;
           left: 0.14rem;
           line-height: 1;
           font-size: 0.13rem;
         }
+
         p {
           position: absolute;
           bottom: 0.34rem;
           left: 0.14rem;
           line-height: 1;
           font-size: 0.1rem;
+
           &.lp {
             bottom: 0.14rem;
           }
@@ -455,9 +507,11 @@ export default {
       }
     }
   }
+
   .box-2 {
     margin-bottom: 0.28rem;
-    .txt-c {
+
+    .text-c {
       opacity: 0;
       position: absolute;
       z-index: 2;
@@ -467,6 +521,7 @@ export default {
       color: #f2f2f2;
       background: rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease;
+
       h5 {
         position: absolute;
         bottom: 0.3rem;
@@ -474,6 +529,7 @@ export default {
         line-height: 1;
         font-size: 0.13rem;
       }
+
       p {
         position: absolute;
         bottom: 0.16rem;
@@ -482,19 +538,24 @@ export default {
         font-size: 0.1rem;
       }
     }
+
     .col:hover {
       .slice:before {
         opacity: 1;
       }
-      .txt-c {
+
+      .text-c {
         opacity: 1;
       }
     }
   }
+
   .box-3 {
     margin-bottom: 0.14rem;
+
     .logo-list {
       overflow: hidden;
+
       li {
         cursor: default;
         float: left;
@@ -506,16 +567,21 @@ export default {
         background-position: center;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+
         &:nth-child(3n) {
           margin-right: 0;
         }
       }
     }
   }
+
   .box-4 {
     margin-bottom: 0.14rem;
+
     img {
       display: block;
+      width: 7.5rem;
+      height: 3.51rem;
       margin-bottom: 0;
     }
   }
@@ -523,62 +589,77 @@ export default {
   .col-1 {
     overflow: hidden;
     margin-bottom: 0.28rem;
+
     .top-c {
       width: 7.5rem;
       height: 2.24rem;
+
       img {
         width: 7.5rem;
         height: 2.24rem;
       }
     }
+
     .bottom-c {
       display: flex;
       justify-content: space-between;
+
       > div {
         width: 2.4rem;
         height: 1.12rem;
         margin-top: 0.14rem;
       }
+
       img {
         width: 2.4rem;
         height: 1.12rem;
       }
     }
   }
+
   .col-2 {
     overflow: hidden;
     margin-bottom: 0.28rem;
-    .left-c {
+
+    > .left-c {
       height: 3.51rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       .l-top {
         width: 4.95rem;
         height: 1.12rem;
+
         img {
           width: 4.95rem;
           height: 1.12rem;
         }
       }
+
       .l-middle {
         overflow: hidden;
+
         .left-c,
         .right-c {
           width: 2.4rem;
           height: 0.96rem;
+
           img {
             width: 2.4rem;
             height: 0.96rem;
           }
         }
       }
+
       .l-bottom {
         overflow: hidden;
+
         .left-c,
         .right-c {
           width: 2.4rem;
           height: 1.12rem;
+
           img {
             width: 2.4rem;
             height: 1.12rem;
@@ -586,30 +667,37 @@ export default {
         }
       }
     }
-    .right-c {
+
+    > .right-c {
       height: 3.51rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       .l-top {
         width: 2.4rem;
         height: 1.12rem;
+
         img {
           width: 2.4rem;
           height: 1.12rem;
         }
       }
+
       .l-middle {
         width: 2.4rem;
         height: 0.96rem;
+
         img {
           width: 2.4rem;
           height: 0.96rem;
         }
       }
+
       .l-bottom {
         width: 2.4rem;
         height: 1.12rem;
+
         img {
           width: 2.4rem;
           height: 1.12rem;
@@ -617,50 +705,86 @@ export default {
       }
     }
   }
+
   .col-3 {
     overflow: hidden;
-    .left-c {
+
+    > .left-c {
       height: 3.51rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       .l-top {
         width: 4.95rem;
         height: 0.96rem;
+
         img {
           width: 4.95rem;
           height: 0.96rem;
         }
       }
+
       .l-middle {
         overflow: hidden;
+
         .left-c,
         .right-c {
           width: 2.4rem;
           height: 1.12rem;
+
           img {
             width: 2.4rem;
             height: 1.12rem;
           }
         }
       }
+
       .l-bottom {
         width: 4.95rem;
         height: 1.12rem;
+
         img {
           width: 4.95rem;
           height: 1.12rem;
         }
       }
     }
-    .right-c {
+
+    > .right-c {
       width: 2.4rem;
       height: 3.51rem;
+
       img {
         width: 2.4rem;
         height: 3.51rem;
       }
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    .slice {
+      &:before {
+        opacity: 1 !important;
+      }
+      .text-c {
+        opacity: 1 !important;
+      }
+    }
+  }
+  .case-list {
+    .text-con {
+      opacity: 1 !important;
+    }
+  }
+  /*.logo-list {
+    .slice:hover {
+      &:before {
+        opacity: 0 !important;
+      }
+    }
+  }*/
 }
 </style>

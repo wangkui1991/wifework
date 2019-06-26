@@ -2,17 +2,17 @@
 
 <template>
   <div class="work-detail">
-    <h3 class="title-text animated slideInUp">OUR WORK</h3>
-    <h4 class="animated slideInUp">Name | 项目名称</h4>
-    <h5 class="animated slideInUp">{{ item.name }}</h5>
-    <p class="animated slideInUp">{{ item.des }}</p>
+    <h3 class="title-text animated fadeInUp">OUR WORK</h3>
+    <h4 class="animated fadeInUp">Name | 项目名称</h4>
+    <h5 class="animated fadeInUp">{{ item.name }}</h5>
+    <p class="animated fadeInUp">{{ item.des }}</p>
     <div class="img-wrap">
       <img
         :src="
           require(`@/assets/images/workDetail_${itemIndex + 1}/${i + 1}.jpg`)
         "
         v-for="(a, i) in item.imgConfig"
-        :class="['animated slideInUp',`img-${a}`]"
+        :class="['animated fadeInUp',`img-${a}`,'ani_delay_'+(i+1)]"
         :key="i"
       />
     </div>
