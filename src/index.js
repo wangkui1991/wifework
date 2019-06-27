@@ -1,6 +1,5 @@
 /** @format */
 import 'babel-polyfill'
-import 'element-ui/lib/theme-chalk/index.css'
 import 'animate.css/animate.min.css'
 import './assets/fonts/SourceHanSan.css'
 import '@/assets/css/common.css'
@@ -14,11 +13,8 @@ import plugin from '@/plugins'
 import router from '@/router'
 import store from '@/store'
 
-import { Table, TableColumn } from 'element-ui'
 FastClick.attach(document.body)
 Vue.use(VueWaypoint)
-Vue.use(Table)
-Vue.use(TableColumn)
 
 Vue.config.productionTip = false
 

@@ -194,7 +194,7 @@ export default {
           number: 2,
           title: '品牌全案 | BRAND DESIGN',
           desc1: '品牌创建：品牌形象丨品牌理念',
-          desc2: '品牌创建：品牌形象丨品牌理念',
+          desc2: '品牌推广：品牌传播策略丨品牌营销策略',
           route: ''
         },
         {

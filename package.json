@@ -12,8 +12,6 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "axios": "^0.18.0",
-    "compression-webpack-plugin": "^3.0.0",
-    "element-ui": "^2.2.2",
     "fastclick": "^1.0.6",
     "lodash": "^4.17.10",
     "vue": "^2.5.2",
