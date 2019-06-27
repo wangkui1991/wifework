@@ -40,7 +40,7 @@
     </div>
     <router-view/>
     <div class="footer">
-      <p>版权所有 ©METIS 粤ICP备11007140号-2</p>
+      <p>版权所有 ©墨缇斯（武汉）文化传媒有限公司 鄂ICP备19014244号</p>
     </div>
   </div>
 </template>
@@ -94,11 +94,6 @@ export default {
       ]
     }
   },
-  /*computed: {
-    isPCMode() {
-      return window.screen.height >= 1024
-    }
-  },*/
   methods: {
     goTo(item) {
       this.$router.push({ name: item.route })
@@ -188,7 +183,7 @@ body {
   .footer {
     width: 7.5rem;
     margin-top: 0.36rem;
-    padding: 0.29rem 0;
+    padding: 0.29rem 10px;
     border-top: 1px solid #e6e6e6;
     p {
       text-align: center;
