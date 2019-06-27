@@ -1,6 +1,6 @@
 <!-- @format -->
 <template>
-  <div class="about">
+  <div class="page about">
     <h3 class="title-text animated fadeInUp">ABOUT US</h3>
     <div class="title">
       <h4 class="animated fadeInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
@@ -20,9 +20,9 @@
       <li v-for="(item, index) in person" :key="index" :class="['animated fadeInUp', 'ani_delay_'+(index+1)]">
         <img :src="require(`@/assets/images/about/${item.number}.jpg`)" alt />
         <div class="person-sum">
-          <h6>{{ item.name }}</h6>
+          <h5>{{ item.name }}</h5>
           <h6>{{ item.title }}</h6>
-          <p>{{ item.sum }}</p>
+          <p :title="item.sum">{{ item.sum }}</p>
         </div>
       </li>
     </ul>
@@ -146,12 +146,13 @@ export default {
     margin-bottom: 0.29rem;
   }
   ul {
+    overflow: hidden;
     li {
       float: left;
-      margin-bottom: 30px;
+      margin-bottom: 0.3rem;
       width: 3.6rem;
       &:nth-child(2n + 1) {
-        margin-right: 30px;
+        margin-right: 0.3rem;
       }
       img {
         display: block;
@@ -160,49 +161,43 @@ export default {
         margin: 0 0 0.14rem;
       }
       .person-sum {
+        overflow: hidden;
+        h5 {
+          text-align: left;
+          margin-bottom: 10px;
+          font-weight: bold;
+          overflow: hidden;
+          font-size: 0.12rem;
+          color: #333;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
         h6 {
           text-align: left;
           margin-bottom: 10px;
           font-weight: bold;
+          font-size: 0.12rem;
+          color: #333;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
         p {
           text-align: left;
+          letter-spacing: 1px;
+          overflow: hidden;
+          display: -webkit-box;
+          font-size: 0.1rem;
           color: #666;
-          letter-spacing: 2px;
+          white-space: normal;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
         }
       }
     }
   }
   @media screen and (max-width: 500px) {
-    ul {
-      li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 30px;
-        img {
-          width: 7rem;
-          height: auto;
-        }
-        .person-sum {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          justify-content: flex-end;
-          margin-left: 20px;
-          h6 {
-            text-align: left;
-            margin-bottom: 10px;
-            font-weight: bold;
-          }
-          p {
-            text-align: left;
-            color: #666;
-            letter-spacing: 2px;
-          }
-        }
-      }
-    }
   }
 }
 </style>

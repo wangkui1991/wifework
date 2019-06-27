@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <div class="work-detail">
+  <div class="page work-detail">
     <h3 class="title-text animated fadeInUp">OUR WORK</h3>
     <h4 class="animated fadeInUp">Name | 项目名称</h4>
     <h5 class="animated fadeInUp">{{ item.name }}</h5>

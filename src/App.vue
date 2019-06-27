@@ -140,6 +140,9 @@ body {
     transform: translate3d(0, 100%, 0);
     opacity: 0;
   }
+  .page {
+    box-sizing: border-box;
+  }
   .img-logo {
     width: 4.4rem;
     margin: 50px auto 20px;
@@ -195,8 +198,11 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 622px) {
   #app {
+    .img-logo {
+      margin: 40px auto 16px;
+    }
     .nav-wrap {
       height: 0.8rem;
     }
@@ -204,7 +210,7 @@ body {
       .nav-item {
         flex-direction: column;
         text-align: center;
-
+        margin-right: 20px;
         p {
           font-size: 0.12rem;
           &.zh {

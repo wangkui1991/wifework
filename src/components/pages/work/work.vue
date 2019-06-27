@@ -1,6 +1,6 @@
 <!-- @format -->
 <template>
-  <div class="work">
+  <div class="page work">
     <h3 class="title-text animated fadeInUp">OUR WORK</h3>
     <div class="title">
       <h4 class="animated fadeInUp">墨缇斯（武汉）文化传媒有限公司，</h4>

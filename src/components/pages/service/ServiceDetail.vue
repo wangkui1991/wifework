@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <div class="service-detail">
+  <div class="page service-detail">
     <h3 class="title-text animated fadeInUp">{{ item.name }}</h3>
     <h5 class="animated fadeInUp">{{ item.des }}</h5>
     <p class="animated fadeInUp">{{ item.con }}</p>

@@ -1,6 +1,6 @@
 <!-- @format -->
 <template>
-  <div class="contact">
+  <div class="page contact">
     <h3 class="title-text animated fadeInUp">CONTACT US</h3>
     <div class="main">
       <div class="left animated fadeInUp ani_delay_1">

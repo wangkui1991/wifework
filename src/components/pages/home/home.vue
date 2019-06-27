@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <div class="home">
+  <div class="page home">
     <div class="box box-0" @click="goToAbout">
       <div class="left-c slice ani_delay_1" v-waypoint="wayPointConfig"><img
         src="@/assets/images/home/1-1.jpg"></div>
@@ -238,16 +238,14 @@ export default {
         el.classList.add('fadeInUp')
       }
       /*if (going === this.$waypointMap.GOING_OUT) {
-          console.log('waypoint going out!')
-        }*/
+            console.log('waypoint going out!')
+          }*/
       /*if (direction === this.$waypointMap.DIRECTION_TOP) {
-          // console.log('waypoint going top!')
-          el.classList.add('animated')
-          el.classList.add('fadeInUp')
-        }*/
+            // console.log('waypoint going top!')
+          }*/
       /*if (direction === this.$waypointMap.DIRECTION_BOTTOM) {
-          console.log('waypoint going bottom!')
-        }*/
+            console.log('waypoint going bottom!')
+          }*/
     },
     hoverTitle(e) {
       let dom = this.$refs[e]
@@ -321,7 +319,7 @@ export default {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.4);
-        transition: all 0.3s ease;
+        transition: 1s opacity cubic-bezier(0.275, 0, 0, 1);
       }
     }
 
@@ -412,7 +410,7 @@ export default {
       z-index: 2;
       font-size: 0.28rem;
       color: #fff;
-      transition: all 0.3s ease;
+      transition: 1s opacity cubic-bezier(0.275, 0, 0, 1);
     }
 
     .r-bottom {
@@ -483,7 +481,7 @@ export default {
         text-align: left;
         color: #f2f2f2;
         background: rgba(0, 0, 0, 0.4);
-        transition: all 0.3s ease;
+        transition: 1.2s opacity cubic-bezier(0.275, 0, 0, 1);
 
         h5 {
           position: absolute;
@@ -519,8 +517,7 @@ export default {
       height: 100%;
       text-align: left;
       color: #f2f2f2;
-      background: rgba(0, 0, 0, 0.4);
-      transition: all 0.3s ease;
+      transition: 1s opacity cubic-bezier(0.275, 0, 0, 1);
 
       h5 {
         position: absolute;
@@ -769,22 +766,25 @@ export default {
       &:before {
         opacity: 1 !important;
       }
+
       .text-c {
         opacity: 1 !important;
       }
     }
   }
+
   .case-list {
     .text-con {
       opacity: 1 !important;
     }
   }
+
   /*.logo-list {
-    .slice:hover {
-      &:before {
-        opacity: 0 !important;
+      .slice:hover {
+        &:before {
+          opacity: 0 !important;
+        }
       }
-    }
-  }*/
+    }*/
 }
 </style>

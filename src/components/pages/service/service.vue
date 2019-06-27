@@ -1,6 +1,6 @@
 <!-- @format -->
 <template>
-  <div class="service">
+  <div class="page service">
     <h3 class="title-text animated fadeInUp">SERVICES</h3>
     <ul class="case-list">
       <li v-for="(item, index) in caseList"
@@ -34,29 +34,29 @@ export default {
       caseList: [
         {
           number: 1,
-          title: '品牌全案 | BRAND DESIGN',
-          desc1: '品牌创建：品牌形象 | 品牌理念',
-          desc2: '品牌推广：品牌传播策略 | 品牌营销策略',
-          route: ''
-        },
-        {
-          number: 2,
-          title: '整合营销 | MARKETING',
-          desc1: '产品策略丨渠道包装',
-          desc2: '销售方案',
-          route: ''
-        },
-        {
-          number: 3,
           title: '红色文化 | RED CULTURAL',
           desc1: '红色文化创新 | 红色历史底蕴挖掘',
           desc2: '党史党政党建宣传 | 红色文创产品创作',
           route: ''
         },
         {
+          number: 2,
+          title: '品牌全案 | BRAND DESIGN',
+          desc1: '品牌创建：品牌形象丨品牌理念',
+          desc2: '品牌推广：品牌传播策略丨品牌营销策略',
+          route: ''
+        },
+        {
+          number: 3,
+          title: '整合营销 | MARKETING',
+          desc1: '产品策略 | 渠道包装',
+          desc2: '销售方案',
+          route: ''
+        },
+        {
           number: 4,
-          title: '新媒体 | NEW MEDIA',
-          desc1: '数字营销 | 互联网传播',
+          title: '销售方案',
+          desc1: '销售方案',
           desc2: '新媒体平台运营',
           route: ''
         }
