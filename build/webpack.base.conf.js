@@ -74,18 +74,28 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|svg)(\?.*)?$/,
         loader: "url-loader",
-        exclude: [resolve("src/assets/images/svg")],
+        exclude: [resolve("src/assets/images/svg"), resolve("src/assets/fonts")],
         options: {
           limit: 1024,
           name: utils.assetsPath("images/[name].[hash:7].[ext]")
         }
       },
-      {
+      /*{
         test: /\.(woff|woff2|eot|ttf|otf|svg)?$/,
         loader: "url-loader",
-        options: {
+        /!*options: {
           limit: 10000,
           name: utils.assetsPath("fonts/[name]/[name].[ext]")
+        }*!/
+      },*/
+      {
+        test: /\.(eot|svg|ttf|otf|woff|woff2)\w*/,
+        loader: "file-loader",
+        options: {
+          outputPath:'./assets/fonts/',
+          publicPath:'./assets/fonts/',//打包到fonts文件夹
+          useRelativePath: false,//设置为相对路径
+          name: '[name]/[name].[ext]'
         }
       },
       {

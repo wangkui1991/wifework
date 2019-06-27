@@ -55,7 +55,7 @@ button,
 input,
 select,
 textarea {
-    font-family: SourceHanSans-Regular, '微软雅黑', 'Helvetica Neue', Arial,
+    font-family: SourceHanSans-Regular, 'Microsoft YaHei', 'Helvetica Neue', Arial,
     Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self, serif;
 }
 
@@ -247,7 +247,7 @@ a {
 }
 
 .title-text{
-    font-family: SourceHanSans-Light, '微软雅黑', 'Helvetica Neue', Arial,
+    font-family: SourceHanSans-Light, 'Microsoft YaHei', 'Helvetica Neue', Arial,
 Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self, serif;
     font-weight: lighter;
     font-size: 0.3rem;

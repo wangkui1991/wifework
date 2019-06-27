@@ -1,8 +1,8 @@
 @charset "UTF-8";
-
 @font-face {
   font-family: "SourceHanSans-Normal";
-  src: url("SourceHanSans-Normal/SourceHanSans-Normal.woff2") format("woff2"),
+  src: url("SourceHanSans-Normal/SourceHanSans-Normal.otf") format("otf"),
+  url("SourceHanSans-Normal/SourceHanSans-Normal.woff2") format("woff2"),
   url("SourceHanSans-Normal/SourceHanSans-Normal.woff") format("woff"),
   url("SourceHanSans-Normal/SourceHanSans-Normal.ttf") format("truetype"),
   url("SourceHanSans-Normal/SourceHanSans-Normal.eot") format("embedded-opentype"),
@@ -10,10 +10,10 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SourceHanSans-Regular";
-  src: url("SourceHanSans-Regular/SourceHanSans-Regular.woff2") format("woff2"),
+  src: url("SourceHanSans-Regular/SourceHanSans-Regular.otf") format("otf"),
+  url("SourceHanSans-Regular/SourceHanSans-Regular.woff2") format("woff2"),
   url("SourceHanSans-Regular/SourceHanSans-Regular.woff") format("woff"),
   url("SourceHanSans-Regular/SourceHanSans-Regular.ttf") format("truetype"),
   url("SourceHanSans-Regular/SourceHanSans-Regular.eot") format("embedded-opentype"),
@@ -21,10 +21,10 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SourceHanSans-Medium";
-  src: url("SourceHanSans-Medium/SourceHanSans-Medium.woff2") format("woff2"),
+  src: url("SourceHanSans-Medium/SourceHanSans-Medium.otf") format("otf"),
+  url("SourceHanSans-Medium/SourceHanSans-Medium.woff2") format("woff2"),
   url("SourceHanSans-Medium/SourceHanSans-Medium.woff") format("woff"),
   url("SourceHanSans-Medium/SourceHanSans-Medium.ttf") format("truetype"),
   url("SourceHanSans-Medium/SourceHanSans-Medium.eot") format("embedded-opentype"),
@@ -32,10 +32,10 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SourceHanSans-Light";
-  src: url("SourceHanSans-Light/SourceHanSans-Light.woff2") format("woff2"),
+  src: url("SourceHanSans-Light/SourceHanSans-Light.otf") format("otf"),
+  url("SourceHanSans-Light/SourceHanSans-Light.woff2") format("woff2"),
   url("SourceHanSans-Light/SourceHanSans-Light.woff") format("woff"),
   url("SourceHanSans-Light/SourceHanSans-Light.ttf") format("truetype"),
   url("SourceHanSans-Light/SourceHanSans-Light.eot") format("embedded-opentype"),
@@ -43,10 +43,10 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SourceHanSans-Bold";
-  src: url("SourceHanSans-Bold/SourceHanSans-Bold.woff2") format("woff2"),
+  src: url("SourceHanSans-Bold/SourceHanSans-Bold.otf") format("otf"),
+  url("SourceHanSans-Bold/SourceHanSans-Bold.woff2") format("woff2"),
   url("SourceHanSans-Bold/SourceHanSans-Bold.woff") format("woff"),
   url("SourceHanSans-Bold/SourceHanSans-Bold.ttf") format("truetype"),
   url("SourceHanSans-Bold/SourceHanSans-Bold.eot") format("embedded-opentype"),

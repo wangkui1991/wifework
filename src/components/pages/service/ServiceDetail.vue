@@ -41,9 +41,9 @@ export default {
 .service-detail {
   width: 7.5rem;
   .title-text {
-    font-family: SourceHanSans-Medium, '微软雅黑', 'Helvetica Neue', Arial,
-      Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self,
-      serif;
+    font-family: SourceHanSans-Medium, 'Microsoft YaHei', 'Helvetica Neue',
+      Arial, Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
+      sans-self, serif;
     margin-bottom: 0.14rem;
   }
   > h5 {
@@ -67,9 +67,9 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     h4 {
-      font-family: SourceHanSans-Medium, '微软雅黑', 'Helvetica Neue', Arial,
-        Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self,
-        serif;
+      font-family: SourceHanSans-Medium, 'Microsoft YaHei', 'Helvetica Neue',
+        Arial, Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
+        sans-self, serif;
       font-size: 0.17rem;
       line-height: 1;
       height: 0.25rem;

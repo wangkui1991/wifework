@@ -76,7 +76,7 @@ let webpackConfig = merge(baseWebpackConfig, {
           module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0
         );
       }
-    })
+    }),
     // // This instance extracts shared chunks from code splitted chunks and bundles them
     // // in a separate chunk, similar to the vendor chunk
     // // see: https://webpack.js.org/plugins/commons-chunk-plugin/#extra-async-commons-chunk
@@ -92,6 +92,14 @@ let webpackConfig = merge(baseWebpackConfig, {
     //     to: path.resolve(__dirname, '../dist/', 'mock')
     //   }
     // ])
+    //复制字体文件
+    /*new CopyWebpackPlugin(
+      [{ from: 'src/assets/fonts', to: 'assets/fonts/', toType: 'dir', ignore:['css']}]
+    ),*/
+    //复制favicon
+    new CopyWebpackPlugin(
+      [{ from: 'src/favicon.ico', to: './' }]
+    ),
   ]
 });
 

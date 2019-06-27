@@ -164,8 +164,8 @@ body {
         0.6s background-color cubic-bezier(0.19, 1, 0.22, 1),
         0.6s -webkit-transform cubic-bezier(0.19, 1, 0.22, 1);
       p {
-        font-family: SourceHanSans-Light, '微软雅黑', 'Helvetica Neue', Arial,
-          Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
+        font-family: SourceHanSans-Light, 'Microsoft YaHei', 'Helvetica Neue',
+          Arial, Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
           sans-self, serif;
         margin-bottom: 5px;
         font-size: 14px;
