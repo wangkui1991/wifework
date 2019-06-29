@@ -60,6 +60,7 @@ textarea {
 }
 
 body {
+    overflow-x: hidden;
     -webkit-text-size-adjust: none;
     background-color: #fafafa;
 }
@@ -251,12 +252,12 @@ a {
 Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun, sans-self, serif;
     font-weight: lighter;
     font-size: 0.3rem;
-    align-self: flex-start;
+    text-align: left;
     line-height: 1;
     margin-bottom: 0.28rem;
     letter-spacing: 0;
     color: #1a1a1a;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .shadow {

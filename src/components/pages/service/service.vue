@@ -27,8 +27,6 @@
 
 <script>
 export default {
-  components: {},
-  props: {},
   data() {
     return {
       caseList: [
@@ -63,10 +61,6 @@ export default {
       ]
     }
   },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
   methods: {
     goToService(index) {
       this.$router.push({ name: 'serviceDetail', query: { index } })
@@ -78,6 +72,7 @@ export default {
 <style scoped lang="less">
 .service {
   width: 7.5rem;
+  padding-top: 10px;
   .case-list {
     overflow: hidden;
     li {
@@ -91,11 +86,6 @@ export default {
       background-position: center;
       -webkit-background-size: 100% 100%;
       background-size: 100% 100%;
-      /*&:hover {
-        .txt-con {
-          opacity: 1;
-        }
-      }*/
       img {
         position: relative;
         z-index: 1;
@@ -109,7 +99,6 @@ export default {
     }
     .txt-con {
       position: absolute;
-      /*opacity: 0;*/
       width: 100%;
       height: 100%;
       z-index: 2;
@@ -117,8 +106,6 @@ export default {
       top: 0;
       text-align: left;
       color: #f2f2f2;
-      /*background: rgba(0, 0, 0, 0.4);
-      transition: all 0.3s ease;*/
       h5 {
         position: absolute;
         bottom: 0.46rem;
@@ -139,8 +126,7 @@ export default {
     }
   }
   .title-text {
-    padding-top: 20px;
-    margin-bottom: 0.29rem;
+    margin: 0.18rem 0 0.28rem;
   }
   .contact {
     width: 7.5rem;

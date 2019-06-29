@@ -26,8 +26,6 @@
 
 <script>
 export default {
-  components: {},
-  props: {},
   data() {
     return {
       listData: [
@@ -78,10 +76,6 @@ export default {
       ]
     }
   },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
   methods: {
     goToPages(index) {
       if (index >= 3) {
@@ -108,7 +102,7 @@ export default {
     p {
       text-align: left;
       margin-top: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       line-height: 20px;
       font-size: 0.1rem;
       color: #666;
@@ -134,7 +128,6 @@ export default {
       }
       p {
         text-align: left;
-        line-height: 1;
         font-size: 0.12rem;
         color: #666;
         overflow: hidden;
@@ -144,6 +137,17 @@ export default {
           margin-bottom: 10px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .work {
+    .title {
+      padding: 0 0.14rem;
+    }
+    .clickImg p {
+      padding: 0 0.1rem;
     }
   }
 }

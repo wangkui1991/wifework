@@ -3,18 +3,20 @@
 <template>
   <div class="page work-detail">
     <h3 class="title-text animated fadeInUp">OUR WORK</h3>
-    <h4 class="animated fadeInUp">Name | 项目名称</h4>
-    <h5 class="animated fadeInUp">{{ item.name }}</h5>
-    <p class="animated fadeInUp">{{ item.des }}</p>
+    <div class="content">
+      <h4 class="animated fadeInUp">Name | 项目名称</h4>
+      <h5 class="animated fadeInUp">{{ item.name }}</h5>
+      <p class="desc animated fadeInUp">{{ item.des }}</p>
+    </div>
     <div class="img-wrap">
-      <img
-        :src="
-          require(`@/assets/images/workDetail_${itemIndex + 1}/${i + 1}.jpg`)
-        "
-        v-for="(a, i) in item.imgConfig"
-        :class="['animated fadeInUp',`img-${a}`,'ani_delay_'+(i+1)]"
-        :key="i"
-      />
+        <img
+          :src="
+            require(`@/assets/images/workDetail_${itemIndex + 1}/${i + 1}.jpg`)
+          "
+          v-for="(a, i) in item.imgConfig"
+          :class="['animated fadeInUp',`img-${a}`,'ani_delay_'+(i+1)]"
+          :key="i"
+        />
     </div>
   </div>
 </template>
@@ -22,22 +24,16 @@
 <script>
 import mockData from './mockData'
 export default {
-  components: {},
-  props: {},
   data() {
     return {
       item: null,
       itemIndex: 0
     }
   },
-  computed: {},
   created() {
     this.itemIndex = Number(this.$route.query.index)
     this.item = mockData[`detail_${this.itemIndex + 1}`]
-  },
-  mounted() {},
-  watch: {},
-  methods: {}
+  }
 }
 </script>
 
@@ -54,11 +50,11 @@ export default {
     font-size: 0.16rem;
     color: #333;
   }
-  > p {
-    font-size: 0.12rem;
-    line-height: 20px;
-    text-align: left;
+  .desc {
     margin-bottom: 20px;
+    font-size: 0.12rem;
+    line-height: 2;
+    text-align: left;
     color: #666;
   }
   .img-wrap {
@@ -101,6 +97,13 @@ export default {
     .img-7 {
       width: 7.5rem;
       height: 10.6rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .work-detail {
+    .content {
+      padding: 0 0.14rem;
     }
   }
 }

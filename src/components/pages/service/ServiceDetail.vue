@@ -3,14 +3,16 @@
 <template>
   <div class="page service-detail">
     <h3 class="title-text animated fadeInUp">{{ item.name }}</h3>
-    <h5 class="animated fadeInUp">{{ item.des }}</h5>
-    <p class="animated fadeInUp">{{ item.con }}</p>
-    <img class="animated fadeInUp" :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)" alt />
-    <div class="tag-wrap animated fadeInUp">
-      <div v-for="(a, i) in item.list" :key="i">
-        <h4>{{ a.name }}</h4>
-        <h5 v-if="a.des">{{ a.des }}</h5>
-        <p v-for="b in a.conList" :key="b">{{ b }}</p>
+    <div class="content">
+      <h5 class="animated fadeInUp">{{ item.des }}</h5>
+      <p class="desc animated fadeInUp">{{ item.con }}</p>
+      <img class="img-0 animated fadeInUp ani_delay_1" :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)" alt />
+      <div class="tag-wrap animated fadeInUp ani_delay_3">
+        <div v-for="(a, i) in item.list" :key="i">
+          <h4>{{ a.name }}</h4>
+          <h5 v-if="a.des">{{ a.des }}</h5>
+          <p v-for="b in a.conList" :key="b">{{ b }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -19,21 +21,15 @@
 <script>
 import mockData from './mockData'
 export default {
-  components: {},
-  props: {},
   data() {
     return {
       item: null
     }
   },
-  computed: {},
   created() {
     this.index = Number(this.$route.query.index)
     this.item = mockData[`detail_${this.index + 1}`]
-  },
-  mounted() {},
-  watch: {},
-  methods: {}
+  }
 }
 </script>
 
@@ -52,15 +48,16 @@ export default {
     font-size: 0.16rem;
     color: #333;
   }
-  > p {
+  .desc {
+    margin-bottom: 20px;
+    font-size: 0.12rem;
+    line-height: 2;
     text-align: left;
-    font-size: 0.1rem;
     color: #666;
   }
-  > img {
-    width: 7.5rem;
-    margin-top: 0.29rem;
-    margin-bottom: 0.29rem;
+  .img-0 {
+    width: 100%;
+    margin: 0.29rem 0;
   }
   .tag-wrap {
     display: flex;
@@ -71,8 +68,7 @@ export default {
         Arial, Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
         sans-self, serif;
       font-size: 0.17rem;
-      line-height: 1;
-      height: 0.25rem;
+      margin-bottom: 0.12rem;
       color: #333;
     }
     h5 {
@@ -87,6 +83,13 @@ export default {
       line-height: 1.8;
       font-size: 0.1rem;
       color: #666;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .service-detail {
+    .content {
+      padding: 0 0.14rem;
     }
   }
 }

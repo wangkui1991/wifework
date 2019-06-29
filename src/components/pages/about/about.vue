@@ -2,37 +2,37 @@
 <template>
   <div class="page about">
     <h3 class="title-text animated fadeInUp">ABOUT US</h3>
-    <div class="title">
-      <h4 class="animated fadeInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
-      <h4 class="animated fadeInUp">成长型企业品牌建设与升级的创领者，</h4>
-      <h4 class="animated fadeInUp">全方位品牌规划与设计服务为品牌塑造未来。</h4>
-      <p class="animated fadeInUp" v-html="sum.s1"></p>
-      <p class="animated fadeInUp" v-html="sum.s2"></p>
-      <p class="animated fadeInUp" v-html="sum.s3"></p>
+    <div class="content">
+      <div class="title">
+        <h4 class="animated fadeInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
+        <h4 class="animated fadeInUp">成长型企业品牌建设与升级的创领者，</h4>
+        <h4 class="animated fadeInUp">全方位品牌规划与设计服务为品牌塑造未来。</h4>
+        <p class="animated fadeInUp" v-html="sum.s1"></p>
+        <p class="animated fadeInUp" v-html="sum.s2"></p>
+        <p class="animated fadeInUp" v-html="sum.s3"></p>
+      </div>
+      <div v-for="(item, index) in listText" :key="index" :class="['des animated fadeInUp', 'ani_delay_'+(index+1)]">
+        <h5>{{ item.title }}</h5>
+        <p>{{ item.sum }}</p>
+      </div>
+      <img src="@/assets/images/about/1.jpg" alt class="img-1 animated fadeInUp" />
+      <h3 class="title-text animated fadeInUp">OUR TEAM</h3>
+      <ul>
+        <li v-for="(item, index) in person" :key="index" :class="['animated fadeInUp', 'ani_delay_'+(index+1)]">
+          <img :src="require(`@/assets/images/about/${item.number}.jpg`)" alt />
+          <div class="person-sum">
+            <h5>{{ item.name }}</h5>
+            <h6>{{ item.title }}</h6>
+            <p :title="item.sum">{{ item.sum }}</p>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div v-for="(item, index) in listText" :key="index" :class="['des animated fadeInUp', 'ani_delay_'+(index+1)]">
-      <h5>{{ item.title }}</h5>
-      <p>{{ item.sum }}</p>
-    </div>
-    <img src="@/assets/images/about/1.jpg" alt class="img-1 animated fadeInUp" />
-    <h3 class="title-text animated fadeInUp">OUR TEAM</h3>
-    <ul>
-      <li v-for="(item, index) in person" :key="index" :class="['animated fadeInUp', 'ani_delay_'+(index+1)]">
-        <img :src="require(`@/assets/images/about/${item.number}.jpg`)" alt />
-        <div class="person-sum">
-          <h5>{{ item.name }}</h5>
-          <h6>{{ item.title }}</h6>
-          <p :title="item.sum">{{ item.sum }}</p>
-        </div>
-      </li>
-    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  components: {},
-  props: {},
   data() {
     return {
       sum: {
@@ -96,12 +96,7 @@ export default {
         }
       ]
     }
-  },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
-  methods: {}
+  }
 }
 </script>
 
@@ -141,23 +136,21 @@ export default {
     }
   }
   .img-1 {
-    margin-top: 0.29rem;
-    width: 7.5rem;
-    margin-bottom: 0.29rem;
+    margin: 0.29rem 0;
+    width: 100%;
   }
   ul {
     overflow: hidden;
     li {
       float: left;
       margin-bottom: 0.3rem;
-      width: 3.6rem;
+      width: 48%;
       &:nth-child(2n + 1) {
-        margin-right: 0.3rem;
+        margin-right: 0.28rem;
       }
       img {
         display: block;
-        width: 3.6rem;
-        height: 3.5rem;
+        width: 100%;
         margin: 0 0 0.14rem;
       }
       .person-sum {
@@ -166,15 +159,15 @@ export default {
           text-align: left;
           margin-bottom: 10px;
           font-weight: bold;
-          overflow: hidden;
           font-size: 0.12rem;
           color: #333;
+          overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
         }
         h6 {
           text-align: left;
-          margin-bottom: 10px;
+          margin-bottom: 0.1rem;
           font-weight: bold;
           font-size: 0.12rem;
           color: #333;
@@ -189,15 +182,20 @@ export default {
           display: -webkit-box;
           font-size: 0.1rem;
           color: #666;
-          white-space: normal;
+          /*white-space: normal;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
-          line-clamp: 2;
+          line-clamp: 2;*/
         }
       }
     }
   }
-  @media screen and (max-width: 500px) {
+}
+@media screen and (max-width: 1024px) {
+  .about {
+    .content {
+      padding: 0 0.14rem;
+    }
   }
 }
 </style>

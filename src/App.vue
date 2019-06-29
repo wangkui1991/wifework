@@ -187,35 +187,8 @@ body {
     border-top: 1px solid #e6e6e6;
     p {
       text-align: center;
-      font-size: 13px;
+      font-size: 12px;
       color: #b3b3b3;
-    }
-  }
-}
-
-@media screen and (max-width: 622px) {
-  #app {
-    .img-logo {
-      margin: 40px auto 16px;
-    }
-    .nav-wrap {
-      height: 0.8rem;
-    }
-    .nav {
-      .nav-item {
-        flex-direction: column;
-        text-align: center;
-        margin-right: 20px;
-        p {
-          font-size: 0.12rem;
-          &.zh {
-            font-weight: bold;
-          }
-        }
-        em {
-          display: none;
-        }
-      }
     }
   }
 }
@@ -253,5 +226,47 @@ img {
 
 .clickImg {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .title-text {
+    padding-left: 0.14rem;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 622px) {
+  #app {
+    .img-logo {
+      margin: 40px auto 16px;
+    }
+    .nav-wrap {
+      height: 0.8rem;
+    }
+    .nav {
+      .nav-item {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0.5rem;
+        p {
+          font-size: 0.14rem;
+          &.zh {
+            font-weight: bold;
+          }
+        }
+        em {
+          display: none;
+        }
+      }
+    }
+    .title-text {
+      font-weight: 300;
+    }
+    h5 {
+      font-size: 0.16rem;
+    }
+    p {
+      font-size: 0.14rem;
+    }
+  }
 }
 </style>

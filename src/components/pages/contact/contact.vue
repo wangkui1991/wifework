@@ -35,16 +35,9 @@
 
 <script>
 export default {
-  components: {},
-  props: {},
   data() {
     return {}
-  },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
-  methods: {}
+  }
 }
 </script>
 
@@ -128,6 +121,15 @@ h3 {
         width: 6rem;
         margin-bottom: 20px;
         height: 5rem;
+      }
+      .center {
+        font-size: 0.14rem;
+        .qrcode {
+          width: 2rem !important;
+        }
+        p {
+          font-size: 0.14rem;
+        }
       }
       .right {
         width: 6rem;

@@ -25,7 +25,7 @@
     </div>
     <!--SERVICE-->
     <h3
-      class="title-text"
+      class="title-text ani_delay_1"
       @mouseover="hoverTitle('services')"
       @mouseout="noHoverTitle('services')"
       ref="services"
@@ -51,7 +51,7 @@
     </div>
     <!--OUR WORK-->
     <h3
-      class="title-text"
+      class="title-text ani_delay_1"
       @mouseover="hoverTitle('work')"
       @mouseout="noHoverTitle('work')"
       ref="work"
@@ -60,15 +60,40 @@
       OUR WORK
     </h3>
     <div class="box box-2">
+      <div class="col col-0">
+        <div class="top-c">
+          <div class="left-c">
+            <div class="l-top slice ani_delay_1" v-waypoint="wayPointConfig">
+              <img src="@/assets/images/home/3-0-1.jpg">
+            </div>
+            <div class="l-bottom">
+              <div class="left-c slice ani_delay_2" v-waypoint="wayPointConfig">
+                <img src="@/assets/images/home/3-0-2.jpg"></div>
+              <div class="right-c slice ani_delay_4" v-waypoint="wayPointConfig">
+                <img src="@/assets/images/home/3-0-3.jpg"></div>
+            </div>
+          </div>
+          <div class="right-c slice ani_delay_3" v-waypoint="wayPointConfig">
+            <img src="@/assets/images/home/3-0-4.jpg">
+          </div>
+        </div>
+        <div class="bottom-c slice ani_delay_5" v-waypoint="wayPointConfig">
+          <div class="text-c">
+            <h5>Name | 项目名称</h5>
+            <p>UR COLLECTION | 红色文化宣传</p>
+          </div>
+          <img src="@/assets/images/home/3-0-5.jpg">
+        </div>
+      </div>
       <div class="col col-1" @click="goToWork(0)">
         <div class="top-c slice ani_delay_1" v-waypoint="wayPointConfig"><img
           src="@/assets/images/home/3-1.jpg"></div>
         <div class="bottom-c">
           <div class="left-c slice ani_delay_2" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/3-2.jpg"></div>
-          <div class="middle-c slice ani_delay_3" v-waypoint="wayPointConfig">
+          <div class="middle-c slice ani_delay_4" v-waypoint="wayPointConfig">
             <img src="@/assets/images/home/3-3.jpg"></div>
-          <div class="right-c slice ani_delay_4" v-waypoint="wayPointConfig">
+          <div class="right-c slice ani_delay_5" v-waypoint="wayPointConfig">
             <div class="text-c">
               <h5>Name | 项目名称</h5>
               <p>UR COLLECTION | 奥普</p>
@@ -135,7 +160,7 @@
     </div>
     <!--CUSTOMER-->
     <h3
-      class="title-text"
+      class="title-text ani_delay_1"
       @mouseover="hoverTitle('customer')"
       @mouseout="noHoverTitle('customer')"
       ref="customer"
@@ -154,7 +179,7 @@
     </div>
     <!--CONTACT US-->
     <h3
-      class="title-text"
+      class="title-text ani_delay_1"
       @mouseover="hoverTitle('contact')"
       @mouseout="noHoverTitle('contact')"
       ref="contact"
@@ -178,8 +203,6 @@
 import { addClass, removeClass } from '@/assets/js/common'
 
 export default {
-  props: {},
-  components: {},
   data() {
     return {
       caseList: [
@@ -223,10 +246,6 @@ export default {
       }
     }
   },
-  computed: {},
-  created() {},
-  mounted() {},
-  watch: {},
   methods: {
     onWaypoint({ el, going, direction, _entry }) {
       // going: in, out
@@ -583,6 +602,56 @@ export default {
     }
   }
 
+  .col-0 {
+    overflow: hidden;
+    margin-bottom: 0.28rem;
+    > .top-c {
+      overflow: hidden;
+      > .right-c {
+        width: 2.4rem;
+        height: 2.24rem;
+        img {
+          width: 2.4rem;
+          height: 2.24rem;
+        }
+      }
+      .l-top {
+        width: 4.95rem;
+        height: 0.96rem;
+
+        img {
+          width: 4.95rem;
+          height: 0.96rem;
+        }
+      }
+      .l-bottom {
+        margin-top: 0.14rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .left-c,
+        .right-c {
+          width: 2.4rem;
+          height: 1.12rem;
+
+          img {
+            width: 2.4rem;
+            height: 1.12rem;
+          }
+        }
+      }
+    }
+    > .bottom-c {
+      margin-top: 0.14rem;
+      width: 7.5rem;
+      height: 1.12rem;
+      img {
+        width: 7.5rem;
+        height: 1.12rem;
+      }
+    }
+  }
+
   .col-1 {
     overflow: hidden;
     margin-bottom: 0.28rem;
@@ -766,7 +835,6 @@ export default {
       &:before {
         opacity: 1 !important;
       }
-
       .text-c {
         opacity: 1 !important;
       }
