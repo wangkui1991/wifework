@@ -234,7 +234,7 @@ img {
     font-weight: 300;
   }
 }
-@media screen and (max-width: 622px) {
+@media screen and (max-width: 720px) {
   #app {
     .img-logo {
       margin: 40px auto 16px;

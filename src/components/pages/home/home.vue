@@ -229,8 +229,8 @@ export default {
         },
         {
           number: 4,
-          title: '销售方案',
-          desc1: '销售方案',
+          title: '新媒体 | NEW MEDIA',
+          desc1: '数字营销 | 互联网传播',
           desc2: '新媒体平台运营',
           route: ''
         }
@@ -833,26 +833,26 @@ export default {
   .box {
     .slice {
       &:before {
-        opacity: 1 !important;
+        display: none !important;
       }
       .text-c {
         opacity: 1 !important;
+        text-shadow: 1px 0 1px #666;
+      }
+    }
+    &.box-0 {
+      .text-c {
+        font-size: 0.28rem !important;
       }
     }
   }
 
   .case-list {
     .text-con {
+      background: none !important;
       opacity: 1 !important;
+      text-shadow: 1px 0 1px #666;
     }
   }
-
-  /*.logo-list {
-      .slice:hover {
-        &:before {
-          opacity: 0 !important;
-        }
-      }
-    }*/
 }
 </style>

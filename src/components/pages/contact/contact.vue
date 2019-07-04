@@ -83,7 +83,7 @@ export default {
         .qrcode {
           display: block;
           width: 1.46rem;
-          margin: 0 auto 10px;
+          margin: 10px auto;
         }
         span {
           color: #b3b3b3;

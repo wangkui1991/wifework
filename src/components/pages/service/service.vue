@@ -53,8 +53,8 @@ export default {
         },
         {
           number: 4,
-          title: '销售方案',
-          desc1: '销售方案',
+          title: '新媒体 | NEW MEDIA',
+          desc1: '数字营销 | 互联网传播',
           desc2: '新媒体平台运营',
           route: ''
         }
