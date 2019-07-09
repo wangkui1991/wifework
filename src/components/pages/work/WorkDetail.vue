@@ -9,14 +9,14 @@
       <p class="desc animated fadeInUp">{{ item.des }}</p>
     </div>
     <div class="img-wrap">
-        <img
-          :src="
+      <img
+        :src="
             require(`@/assets/images/workDetail_${itemIndex + 1}/${i + 1}.jpg`)
           "
-          v-for="(a, i) in item.imgConfig"
-          :class="['animated fadeInUp',`img-${a}`,'ani_delay_'+(i+1)]"
-          :key="i"
-        />
+        v-for="(a, i) in item.imgConfig"
+        :class="['animated fadeInUp',`img-${a}`,'ani_delay_'+(i+1)]"
+        :key="i"
+      />
     </div>
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
     margin-bottom: 20px;
     font-size: 0.12rem;
     line-height: 2;
-    text-align: left;
+    text-align: justify;
     color: #666;
   }
   .img-wrap {

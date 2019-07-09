@@ -5,9 +5,9 @@
     <div class="title">
       <h4 class="animated fadeInUp">墨缇斯（武汉）文化传媒有限公司，</h4>
       <h4 class="animated fadeInUp">全方位品牌规划与设计服务为品牌塑造未来。</h4>
-      <p class="animated fadeInUp">
-        墨缇斯文化始创于2007年，是中国最早从事成长性企业品牌综合服务机构。业务涵盖了包括调研、策略、设计、体验创新与推广等多个层面，具体到品牌建设及品牌推广、整合营销及销量提升、红色文化文创及馆藏文化文创、数字营销及新媒体运营。
-      </p>
+      <p
+        class="animated fadeInUp"
+      >墨缇斯文化始创于2007年，是中国最早从事成长性企业品牌综合服务机构。业务涵盖了包括调研、策略、设计、体验创新与推广等多个层面，具体到品牌建设及品牌推广、整合营销及销量提升、红色文化文创及馆藏文化文创、数字营销及新媒体运营。</p>
     </div>
     <ul>
       <li
@@ -100,7 +100,7 @@ export default {
       color: #333;
     }
     p {
-      text-align: left;
+      text-align: justify;
       margin-top: 20px;
       margin-bottom: 20px;
       line-height: 20px;

@@ -6,11 +6,15 @@
     <div class="content">
       <h5 class="animated fadeInUp">{{ item.des }}</h5>
       <p class="desc animated fadeInUp">{{ item.con }}</p>
-      <img class="img-0 animated fadeInUp ani_delay_1" :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)" alt />
+      <img
+        class="img-0 animated fadeInUp ani_delay_1"
+        :src="require(`@/assets/images/service/${item.imgNumber}.jpg`)"
+        alt
+      />
       <div class="tag-wrap animated fadeInUp ani_delay_3">
         <div v-for="(a, i) in item.list" :key="i">
-          <h4 v-if="a.name">{{ a.name }}</h4>
-          <h5 v-if="a.des">{{ a.des }}</h5>
+          <h4>{{ a.name }}</h4>
+          <h5>{{ a.des }}</h5>
           <p v-for="b in a.conList" :key="b">{{ b }}</p>
         </div>
       </div>
@@ -67,6 +71,7 @@ export default {
         Arial, Roboto, 'Droid Sans', 'Heiti SC', 'Hiragino Sans GB', Simsun,
         sans-self, serif;
       font-size: 0.17rem;
+      height: 0.2rem;
       margin-bottom: 0.14rem;
       color: #333;
     }

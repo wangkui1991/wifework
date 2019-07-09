@@ -11,14 +11,22 @@
         <p class="animated fadeInUp" v-html="sum.s2"></p>
         <p class="animated fadeInUp" v-html="sum.s3"></p>
       </div>
-      <div v-for="(item, index) in listText" :key="index" :class="['des animated fadeInUp', 'ani_delay_'+(index+1)]">
+      <div
+        v-for="(item, index) in listText"
+        :key="index"
+        :class="['des animated fadeInUp', 'ani_delay_'+(index+1)]"
+      >
         <h5>{{ item.title }}</h5>
         <p>{{ item.sum }}</p>
       </div>
       <img src="@/assets/images/about/1.jpg" alt class="img-1 animated fadeInUp" />
       <h3 class="title-text animated fadeInUp">OUR TEAM</h3>
       <ul>
-        <li v-for="(item, index) in person" :key="index" :class="['animated fadeInUp', 'ani_delay_'+(index+1)]">
+        <li
+          v-for="(item, index) in person"
+          :key="index"
+          :class="['animated fadeInUp', 'ani_delay_'+(index+1)]"
+        >
           <img :src="require(`@/assets/images/about/${item.number}.jpg`)" alt />
           <div class="person-sum">
             <h5>{{ item.name }}</h5>
@@ -113,7 +121,7 @@ export default {
       color: #333;
     }
     p {
-      text-align: left;
+      text-align: justify;
       margin: 10px 0;
       line-height: 20px;
       font-size: 0.1rem;
@@ -130,6 +138,7 @@ export default {
       color: #333;
     }
     p {
+      text-align: justify;
       line-height: 20px;
       font-size: 0.1rem;
       color: #666;
@@ -176,7 +185,7 @@ export default {
           text-overflow: ellipsis;
         }
         p {
-          text-align: left;
+          text-align: justify;
           letter-spacing: 1px;
           overflow: hidden;
           display: -webkit-box;
